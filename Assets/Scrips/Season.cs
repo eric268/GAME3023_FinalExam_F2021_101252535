@@ -16,6 +16,7 @@ public class Season : MonoBehaviour
     public float weather;
     public float daylightStart;
     public float nightStart;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,3 +29,5 @@ public class Season : MonoBehaviour
         
     }
 }
+
+

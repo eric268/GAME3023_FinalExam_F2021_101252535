@@ -29,12 +29,20 @@ public class CalanderScript : MonoBehaviour
         currentDayIndex = 0;
         PopulateDaysWithNameAndSeason();
         clock = GetComponent<Clock>();
+        clock.newDayEvent += NewDay;
     }
 
     // Update is called once per frame
     void Update()
     {
         Debug.Log("Hour: " + clock.hourCounter + " Minut: " + clock.minutesCounter);
+    }
+
+    public void NewDay()
+    {
+        dayScriptArray[currentDayIndex++].enabled = false;
+        dayScriptArray[currentDayIndex].enabled = true;
+        Debug.Log("Today is :" + dayScriptArray[currentDayIndex].dayOfWeek + " Season: " + dayScriptArray[currentDayIndex].season);
     }
 
     public void PopulateDaysWithNameAndSeason()

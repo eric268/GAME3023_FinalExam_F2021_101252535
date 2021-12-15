@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Clock : MonoBehaviour
 {
@@ -12,10 +14,11 @@ public class Clock : MonoBehaviour
     public float secondsCounter;
     public float minutesCounter;
     public float hourCounter;
+
+    public event Action newDayEvent;
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame
@@ -36,10 +39,14 @@ public class Clock : MonoBehaviour
                 minutesCounter = 0;
                 hourCounter++;
                 
-                if (hourCounter > hoursInDay)
+                if (hourCounter >= hoursInDay)
                 {
                     hourCounter = 0;
-                    //Broadcast some type of event
+                    if (newDayEvent != null)
+                    {
+                        newDayEvent();
+
+                    }  
                 }
             }
         }
