@@ -1846,6 +1846,7 @@ GameObject:
   - component: {fileID: 354005021}
   - component: {fileID: 354005023}
   - component: {fileID: 354005022}
+  - component: {fileID: 354005024}
   m_Layer: 5
   m_Name: CalendarObject
   m_TagString: Untagged
@@ -1913,6 +1914,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 354005020}
   m_CullTransparentMesh: 1
+--- !u!114 &354005024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 354005020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c738d8db1c3bf44c8627bb5f3b85adc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  calendarTextBoarder: {fileID: 1342324553}
 --- !u!1 &399494410
 GameObject:
   m_ObjectHideFlags: 0
@@ -12057,10 +12071,10 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 354005020}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 0
+      - m_Target: {fileID: 354005024}
+        m_TargetAssemblyTypeName: ToggleCalender, Assembly-CSharp
+        m_MethodName: ToggleRenderer
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -17821,7 +17835,7 @@ GameObject:
   - component: {fileID: 1342324556}
   - component: {fileID: 1342324555}
   m_Layer: 5
-  m_Name: Calendar (1)
+  m_Name: Calendar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
