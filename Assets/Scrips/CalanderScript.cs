@@ -28,14 +28,14 @@ public class CalanderScript : MonoBehaviour
         totalNumberOfDays = dayScriptArray.Length;
         currentDayIndex = 0;
         PopulateDaysWithNameAndSeason();
-        clock = GetComponent<Clock>();
-        clock.newDayEvent += NewDay;
+
+        Clock.Instance().newDayEvent += NewDay;
     }
 
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("Hour: " + clock.hourCounter + " Minut: " + clock.minutesCounter);
+        Debug.Log("Hour: " + Clock.Instance().hourCounter + " Minut: " + Clock.Instance().minutesCounter);
     }
 
     public void NewDay()
