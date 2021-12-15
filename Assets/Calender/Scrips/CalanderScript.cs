@@ -5,18 +5,19 @@ using UnityEngine.Experimental.Rendering.Universal;
 
 public enum DaysOfWeek
 {
-    SUNDAY,
-    MONDAY,
-    TUESDAY,
-    WEDNESDAY,
-    THURSDAY,
-    FRIDAY,
-    SATURDAY,
+    Sunday,
+    Monday,
+    Tuesday,
+    Wednesday,
+    Thursday,
+    Friday,
+    Saturday,
     NUM_OF_DAYS_PER_WEEK
 }
 
 public class CalanderScript : MonoBehaviour
 {
+    private DayScript ActiveDay;
 
     static int totalNumberOfDays;
     public int currentDayIndex;
@@ -26,6 +27,13 @@ public class CalanderScript : MonoBehaviour
     Clock clock;
     public Light2D globalLightSource;
     public Season[] seasonArray;
+    public DaysOfWeek currentDay;
+    public SeasonName currentSeason;
+
+    private void Awake()
+    {
+        Clock.Instance().newDayEvent += NewDay;
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -34,7 +42,8 @@ public class CalanderScript : MonoBehaviour
         totalNumberOfDays = dayScriptArray.Length;
         DisableAllDaysOfCalender();
         PopulateDaysWithNameAndSeason();
-        Clock.Instance().newDayEvent += NewDay;
+        currentDay = dayScriptArray[currentDayIndex].dayOfWeek;
+        currentSeason = dayScriptArray[currentDayIndex].season.seasonName;
     }
 
     // Update is called once per frame
@@ -55,7 +64,10 @@ public class CalanderScript : MonoBehaviour
     {
         dayScriptArray[currentDayIndex++].enabled = false;
         dayScriptArray[currentDayIndex].enabled = true;
-        Debug.Log("Today is :" + dayScriptArray[currentDayIndex].dayOfWeek + " Season: " + dayScriptArray[currentDayIndex].season.seasonName);
+        currentDay = dayScriptArray[currentDayIndex].dayOfWeek;
+        currentSeason = dayScriptArray[currentDayIndex].season.seasonName;
+
+        ActiveDay = dayScriptArray[currentDayIndex];
     }
 
     public void PopulateDaysWithNameAndSeason()
@@ -63,7 +75,7 @@ public class CalanderScript : MonoBehaviour
         int seasonIndex = -1;
         for (int i = 0; i < totalNumberOfDays; i++)
         {
-            dayScriptArray[i].dayOfWeek = (DaysOfWeek)(i);
+            dayScriptArray[i].dayOfWeek = (DaysOfWeek)(i % daysInWeek);
             
             if (i % daysInWeek == 0)
                 seasonIndex++;
@@ -74,6 +86,38 @@ public class CalanderScript : MonoBehaviour
         }
 
         dayScriptArray[currentDayIndex].enabled = true;
+        
+        //For keeping track of OnValidateChanges
+        ActiveDay = dayScriptArray[currentDayIndex];
     }
 
+    void UpdateCalenderOnInspectorChange()
+    {
+        if (ActiveDay != null)
+            ActiveDay.enabled = false;
+
+        dayScriptArray[currentDayIndex].enabled = true;
+        ActiveDay = dayScriptArray[currentDayIndex];
+
+        Clock.Instance().hours = 0;
+        Clock.Instance().minutes = 0;
+        Clock.Instance().seconds = 0;
+
+        currentDay = dayScriptArray[currentDayIndex].dayOfWeek;
+        currentSeason = dayScriptArray[currentDayIndex].season.seasonName;
+
+        GetComponent<TimeDateUI>().NewDay();
+    }
+
+    public void OnValidate()
+    {
+        if (currentDayIndex > totalNumberOfDays - 1)
+        {
+            currentDayIndex = 0;
+        }
+        else if (totalNumberOfDays > 0)
+        {
+            UpdateCalenderOnInspectorChange();
+        }
+    }
 }

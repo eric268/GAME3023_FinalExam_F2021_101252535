@@ -12,6 +12,7 @@ public class DayScript : MonoBehaviour
    
     public Light2D globalLightSource;
     private bool isPastNoon;
+    private bool isNightTime, isDayTime;
     //public Season currentSeason;
     // Start is called before the first frame update
     void Start()
@@ -52,23 +53,36 @@ public class DayScript : MonoBehaviour
 
     void CheckIfDaytime()
     {
-        if (Clock.Instance().hours > season.dayLightStartHours && Clock.Instance().minutes > season.dayLightStartMinutes)
+        if (!isDayTime)
         {
-            globalLightSource.intensity = season.daylightIntensity;
+            if (Clock.Instance().hours >= season.dayLightStartHours && Clock.Instance().minutes > season.dayLightStartMinutes)
+            {
+                isDayTime = true;
+                isNightTime = false;
+                globalLightSource.intensity = season.daylightIntensity;
+            }
         }
     }
 
     void CheckIfNightime()
     {
-        if (Clock.Instance().hours > season.nightTimeStartsHours && Clock.Instance().minutes > season.nightTimeStartsMinutes)
+        if (!isNightTime)
         {
-            globalLightSource.intensity = season.nightTimeLightIntensity;
+            if (Clock.Instance().hours >= season.nightTimeStartsHours && Clock.Instance().minutes > season.nightTimeStartsMinutes)
+            {
+                isDayTime = false;
+                isNightTime = true;
+                globalLightSource.intensity = season.nightTimeLightIntensity;
+            }
         }
     }
 
     private void OnEnable()
     {
+        Debug.Log(gameObject.name + " enabled");
         isCurrentDay = true;
+        isNightTime = true;
+        isDayTime = false;
         globalLightSource.intensity = season.nightTimeLightIntensity;
         globalLightSource.color = season.daylightColor;
         if (season.hasWeather)
@@ -80,6 +94,7 @@ public class DayScript : MonoBehaviour
 
     private void OnDisable()
     {
+        Debug.Log(gameObject.name + " disabled");
         isCurrentDay = false;
 
         if (season.weatherController != null)

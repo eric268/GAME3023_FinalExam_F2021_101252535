@@ -4,10 +4,10 @@ using UnityEngine;
 
 public enum SeasonName
 {
-    SPRING,
-    SUMMER,
-    FALL,
-    WINTER,
+    Spring,
+    Summer,
+    Fall,
+    Winter,
     NUM_OF_SEASONS
 }
 
