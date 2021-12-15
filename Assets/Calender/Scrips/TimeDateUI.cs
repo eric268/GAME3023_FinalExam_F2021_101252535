@@ -23,11 +23,6 @@ public class TimeDateUI : MonoBehaviour
         timeText.SetText("Time: {0:00} : {1:00}", Clock.Instance().hours, Clock.Instance().minutes);
     }
 
-    void UpdateTime()
-    {
-
-    }
-
     public void NewDay()
     {
         dayText.text = "Current Day: " + calander.currentDay.ToString();

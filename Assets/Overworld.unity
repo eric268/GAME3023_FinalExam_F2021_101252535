@@ -771,9 +771,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isCurrentDay: 0
-  season: {fileID: 0}
-  dayOfWeek: 0
-  globalLightSource: {fileID: 0}
+  season: {fileID: 11400000, guid: 95a124760536b204b95d1dbfbea803d7, type: 2}
+  dayOfWeek: 6
+  globalLightSource: {fileID: 2036757915}
 --- !u!114 &55503077
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -787,7 +787,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8113208, g: 0.8113208, b: 0.8113208, a: 1}
+  m_Color: {r: 1, g: 0.69146764, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -968,7 +968,8 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 2009415501}
   m_Father: {fileID: 1832979175}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -990,7 +991,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8117647, g: 0.8117647, b: 0.8117647, a: 1}
+  m_Color: {r: 0.30588236, g: 1, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1028,9 +1029,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isCurrentDay: 0
-  season: {fileID: 0}
+  season: {fileID: 11400000, guid: d3d5e72b731d3b640af32afe97df1a8d, type: 2}
   dayOfWeek: 0
-  globalLightSource: {fileID: 0}
+  globalLightSource: {fileID: 2036757915}
 --- !u!1 &178666317
 GameObject:
   m_ObjectHideFlags: 0
@@ -1082,9 +1083,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isCurrentDay: 0
-  season: {fileID: 0}
-  dayOfWeek: 0
-  globalLightSource: {fileID: 0}
+  season: {fileID: 11400000, guid: 95a124760536b204b95d1dbfbea803d7, type: 2}
+  dayOfWeek: 1
+  globalLightSource: {fileID: 2036757915}
 --- !u!114 &178666320
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1098,7 +1099,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8113208, g: 0.8113208, b: 0.8113208, a: 1}
+  m_Color: {r: 1, g: 0.69146764, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1174,9 +1175,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isCurrentDay: 0
-  season: {fileID: 0}
-  dayOfWeek: 0
-  globalLightSource: {fileID: 0}
+  season: {fileID: 11400000, guid: 7b713e72322e3034792e437b4bea3ceb, type: 2}
+  dayOfWeek: 1
+  globalLightSource: {fileID: 2036757915}
 --- !u!114 &250871508
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1190,7 +1191,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8113208, g: 0.8113208, b: 0.8113208, a: 1}
+  m_Color: {r: 0.8396226, g: 0.45663685, b: 0.20990565, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1694,7 +1695,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9ea1df633b1dc842a45b00d7c041cc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentDayIndex: 20
+  currentDayIndex: 0
   daysInWeek: 7
   globalLightSource: {fileID: 2036757915}
   seasonArray:
@@ -1702,8 +1703,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 95a124760536b204b95d1dbfbea803d7, type: 2}
   - {fileID: 11400000, guid: 7b713e72322e3034792e437b4bea3ceb, type: 2}
   - {fileID: 11400000, guid: a1bbecb2f91340848b79f2b8a40bf916, type: 2}
-  currentDay: 0
-  currentSeason: 0
+  currentDay: 6
+  currentSeason: 2
+  currentDayIcon: {fileID: 2009415500}
 --- !u!114 &282948743
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1997,9 +1999,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isCurrentDay: 0
-  season: {fileID: 0}
-  dayOfWeek: 0
-  globalLightSource: {fileID: 0}
+  season: {fileID: 11400000, guid: d3d5e72b731d3b640af32afe97df1a8d, type: 2}
+  dayOfWeek: 6
+  globalLightSource: {fileID: 2036757915}
 --- !u!114 &399494413
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2013,7 +2015,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8113208, g: 0.8113208, b: 0.8113208, a: 1}
+  m_Color: {r: 0.30588236, g: 1, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2089,9 +2091,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isCurrentDay: 0
-  season: {fileID: 0}
-  dayOfWeek: 0
-  globalLightSource: {fileID: 0}
+  season: {fileID: 11400000, guid: a1bbecb2f91340848b79f2b8a40bf916, type: 2}
+  dayOfWeek: 5
+  globalLightSource: {fileID: 2036757915}
 --- !u!114 &411447237
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2105,7 +2107,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8113208, g: 0.8113208, b: 0.8113208, a: 1}
+  m_Color: {r: 0.3254902, g: 0.7490196, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2181,9 +2183,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isCurrentDay: 0
-  season: {fileID: 0}
-  dayOfWeek: 0
-  globalLightSource: {fileID: 0}
+  season: {fileID: 11400000, guid: a1bbecb2f91340848b79f2b8a40bf916, type: 2}
+  dayOfWeek: 1
+  globalLightSource: {fileID: 2036757915}
 --- !u!114 &428653791
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2197,7 +2199,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8113208, g: 0.8113208, b: 0.8113208, a: 1}
+  m_Color: {r: 0.3254902, g: 0.7490196, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2273,9 +2275,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isCurrentDay: 0
-  season: {fileID: 0}
-  dayOfWeek: 0
-  globalLightSource: {fileID: 0}
+  season: {fileID: 11400000, guid: 7b713e72322e3034792e437b4bea3ceb, type: 2}
+  dayOfWeek: 4
+  globalLightSource: {fileID: 2036757915}
 --- !u!114 &493494862
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2289,7 +2291,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8113208, g: 0.8113208, b: 0.8113208, a: 1}
+  m_Color: {r: 0.8396226, g: 0.45663685, b: 0.20990565, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2372,6 +2374,10 @@ PrefabInstance:
     - target: {fileID: 5799025816887434476, guid: 6f1aebeb7e9e2f844a6101f396d2115e, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5799025816887434476, guid: 6f1aebeb7e9e2f844a6101f396d2115e, type: 3}
+      propertyPath: m_TagString
+      value: Weather
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f1aebeb7e9e2f844a6101f396d2115e, type: 3}
@@ -2747,9 +2753,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isCurrentDay: 0
-  season: {fileID: 0}
-  dayOfWeek: 0
-  globalLightSource: {fileID: 0}
+  season: {fileID: 11400000, guid: a1bbecb2f91340848b79f2b8a40bf916, type: 2}
+  dayOfWeek: 4
+  globalLightSource: {fileID: 2036757915}
 --- !u!114 &704825499
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2763,7 +2769,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8113208, g: 0.8113208, b: 0.8113208, a: 1}
+  m_Color: {r: 0.3254902, g: 0.7490196, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2905,9 +2911,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isCurrentDay: 0
-  season: {fileID: 0}
-  dayOfWeek: 0
-  globalLightSource: {fileID: 0}
+  season: {fileID: 11400000, guid: 95a124760536b204b95d1dbfbea803d7, type: 2}
+  dayOfWeek: 3
+  globalLightSource: {fileID: 2036757915}
 --- !u!114 &722485819
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2921,7 +2927,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8113208, g: 0.8113208, b: 0.8113208, a: 1}
+  m_Color: {r: 1, g: 0.69146764, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2997,9 +3003,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isCurrentDay: 0
-  season: {fileID: 0}
-  dayOfWeek: 0
-  globalLightSource: {fileID: 0}
+  season: {fileID: 11400000, guid: 95a124760536b204b95d1dbfbea803d7, type: 2}
+  dayOfWeek: 2
+  globalLightSource: {fileID: 2036757915}
 --- !u!114 &810370232
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3013,7 +3019,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8113208, g: 0.8113208, b: 0.8113208, a: 1}
+  m_Color: {r: 1, g: 0.69146764, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3089,9 +3095,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isCurrentDay: 0
-  season: {fileID: 0}
-  dayOfWeek: 0
-  globalLightSource: {fileID: 0}
+  season: {fileID: 11400000, guid: a1bbecb2f91340848b79f2b8a40bf916, type: 2}
+  dayOfWeek: 3
+  globalLightSource: {fileID: 2036757915}
 --- !u!114 &956097383
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3105,7 +3111,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8113208, g: 0.8113208, b: 0.8113208, a: 1}
+  m_Color: {r: 0.3254902, g: 0.7490196, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -5289,6 +5295,10 @@ PrefabInstance:
     - target: {fileID: 5056951705168689871, guid: b2f3511f2f65c45428b60588d98440e1, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5056951705168689871, guid: b2f3511f2f65c45428b60588d98440e1, type: 3}
+      propertyPath: m_TagString
+      value: Weather
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b2f3511f2f65c45428b60588d98440e1, type: 3}
@@ -11532,9 +11542,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isCurrentDay: 0
-  season: {fileID: 0}
-  dayOfWeek: 0
-  globalLightSource: {fileID: 0}
+  season: {fileID: 11400000, guid: a1bbecb2f91340848b79f2b8a40bf916, type: 2}
+  dayOfWeek: 2
+  globalLightSource: {fileID: 2036757915}
 --- !u!114 &1045743904
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11548,7 +11558,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8113208, g: 0.8113208, b: 0.8113208, a: 1}
+  m_Color: {r: 0.3254902, g: 0.7490196, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -11624,9 +11634,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isCurrentDay: 0
-  season: {fileID: 0}
-  dayOfWeek: 0
-  globalLightSource: {fileID: 0}
+  season: {fileID: 11400000, guid: d3d5e72b731d3b640af32afe97df1a8d, type: 2}
+  dayOfWeek: 3
+  globalLightSource: {fileID: 2036757915}
 --- !u!114 &1101117907
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11640,7 +11650,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8113208, g: 0.8113208, b: 0.8113208, a: 1}
+  m_Color: {r: 0.30588236, g: 1, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -12103,6 +12113,50 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   m_IsOn: 1
+--- !u!1 &1166066098
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1166066100}
+  - component: {fileID: 1166066099}
+  m_Layer: 0
+  m_Name: Test
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1166066099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1166066098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eea460e8675dea148b88a316483ab7f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  val: 20
+--- !u!4 &1166066100
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1166066098}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 801.43005, y: 506.76355, z: -26.754377}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1200922765
 GameObject:
   m_ObjectHideFlags: 0
@@ -12154,9 +12208,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isCurrentDay: 0
-  season: {fileID: 0}
-  dayOfWeek: 0
-  globalLightSource: {fileID: 0}
+  season: {fileID: 11400000, guid: 95a124760536b204b95d1dbfbea803d7, type: 2}
+  dayOfWeek: 4
+  globalLightSource: {fileID: 2036757915}
 --- !u!114 &1200922768
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12170,7 +12224,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8113208, g: 0.8113208, b: 0.8113208, a: 1}
+  m_Color: {r: 1, g: 0.69146764, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -17801,9 +17855,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isCurrentDay: 0
-  season: {fileID: 0}
-  dayOfWeek: 0
-  globalLightSource: {fileID: 0}
+  season: {fileID: 11400000, guid: 7b713e72322e3034792e437b4bea3ceb, type: 2}
+  dayOfWeek: 3
+  globalLightSource: {fileID: 2036757915}
 --- !u!114 &1327257361
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17817,7 +17871,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8113208, g: 0.8113208, b: 0.8113208, a: 1}
+  m_Color: {r: 0.8396226, g: 0.45663685, b: 0.20990565, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -17968,9 +18022,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isCurrentDay: 0
-  season: {fileID: 0}
-  dayOfWeek: 0
-  globalLightSource: {fileID: 0}
+  season: {fileID: 11400000, guid: 7b713e72322e3034792e437b4bea3ceb, type: 2}
+  dayOfWeek: 5
+  globalLightSource: {fileID: 2036757915}
 --- !u!114 &1351616202
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17984,7 +18038,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8113208, g: 0.8113208, b: 0.8113208, a: 1}
+  m_Color: {r: 0.8396226, g: 0.45663685, b: 0.20990565, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -18060,9 +18114,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isCurrentDay: 0
-  season: {fileID: 0}
-  dayOfWeek: 0
-  globalLightSource: {fileID: 0}
+  season: {fileID: 11400000, guid: d3d5e72b731d3b640af32afe97df1a8d, type: 2}
+  dayOfWeek: 2
+  globalLightSource: {fileID: 2036757915}
 --- !u!114 &1502737767
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18076,7 +18130,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8113208, g: 0.8113208, b: 0.8113208, a: 1}
+  m_Color: {r: 0.30588236, g: 1, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -18152,9 +18206,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isCurrentDay: 0
-  season: {fileID: 0}
-  dayOfWeek: 0
-  globalLightSource: {fileID: 0}
+  season: {fileID: 11400000, guid: d3d5e72b731d3b640af32afe97df1a8d, type: 2}
+  dayOfWeek: 5
+  globalLightSource: {fileID: 2036757915}
 --- !u!114 &1504786314
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18168,7 +18222,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8113208, g: 0.8113208, b: 0.8113208, a: 1}
+  m_Color: {r: 0.30588236, g: 1, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -18244,9 +18298,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isCurrentDay: 0
-  season: {fileID: 0}
-  dayOfWeek: 0
-  globalLightSource: {fileID: 0}
+  season: {fileID: 11400000, guid: d3d5e72b731d3b640af32afe97df1a8d, type: 2}
+  dayOfWeek: 4
+  globalLightSource: {fileID: 2036757915}
 --- !u!114 &1528888116
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18260,7 +18314,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8113208, g: 0.8113208, b: 0.8113208, a: 1}
+  m_Color: {r: 0.30588236, g: 1, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -18336,9 +18390,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isCurrentDay: 0
-  season: {fileID: 0}
-  dayOfWeek: 0
-  globalLightSource: {fileID: 0}
+  season: {fileID: 11400000, guid: d3d5e72b731d3b640af32afe97df1a8d, type: 2}
+  dayOfWeek: 1
+  globalLightSource: {fileID: 2036757915}
 --- !u!114 &1643219942
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18352,7 +18406,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8113208, g: 0.8113208, b: 0.8113208, a: 1}
+  m_Color: {r: 0.30588236, g: 1, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -18428,9 +18482,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isCurrentDay: 0
-  season: {fileID: 0}
+  season: {fileID: 11400000, guid: 7b713e72322e3034792e437b4bea3ceb, type: 2}
   dayOfWeek: 0
-  globalLightSource: {fileID: 0}
+  globalLightSource: {fileID: 2036757915}
 --- !u!114 &1654452894
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18444,7 +18498,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8117647, g: 0.8117647, b: 0.8117647, a: 1}
+  m_Color: {r: 0.8396226, g: 0.45663685, b: 0.20990565, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -19593,15 +19647,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1764473772}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 581a52d07470dff4f8b38bf80550397b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   isCurrentDay: 0
-  season: {fileID: 0}
-  dayOfWeek: 0
-  globalLightSource: {fileID: 0}
+  season: {fileID: 11400000, guid: 7b713e72322e3034792e437b4bea3ceb, type: 2}
+  dayOfWeek: 6
+  globalLightSource: {fileID: 2036757915}
 --- !u!114 &1764473775
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19615,7 +19669,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8113208, g: 0.8113208, b: 0.8113208, a: 1}
+  m_Color: {r: 0.8396226, g: 0.45663685, b: 0.20990565, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -19691,9 +19745,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isCurrentDay: 0
-  season: {fileID: 0}
-  dayOfWeek: 0
-  globalLightSource: {fileID: 0}
+  season: {fileID: 11400000, guid: 7b713e72322e3034792e437b4bea3ceb, type: 2}
+  dayOfWeek: 2
+  globalLightSource: {fileID: 2036757915}
 --- !u!114 &1782145625
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19707,7 +19761,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8113208, g: 0.8113208, b: 0.8113208, a: 1}
+  m_Color: {r: 0.8396226, g: 0.45663685, b: 0.20990565, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -19947,9 +20001,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isCurrentDay: 0
-  season: {fileID: 0}
-  dayOfWeek: 0
-  globalLightSource: {fileID: 0}
+  season: {fileID: 11400000, guid: 95a124760536b204b95d1dbfbea803d7, type: 2}
+  dayOfWeek: 5
+  globalLightSource: {fileID: 2036757915}
 --- !u!114 &1975333565
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19963,7 +20017,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8113208, g: 0.8113208, b: 0.8113208, a: 1}
+  m_Color: {r: 1, g: 0.69146764, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -21103,6 +21157,81 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &2009415500
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2009415501}
+  - component: {fileID: 2009415503}
+  - component: {fileID: 2009415502}
+  m_Layer: 5
+  m_Name: CurrentDayIcon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2009415501
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2009415500}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 115628685}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 50, y: 60}
+  m_SizeDelta: {x: 35, y: 35}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2009415502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2009415500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 6cd9ecc57926fb4448781694da9acb4f, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &2009415503
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2009415500}
+  m_CullTransparentMesh: 1
 --- !u!1 &2012141747
 GameObject:
   m_ObjectHideFlags: 0
@@ -21154,9 +21283,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isCurrentDay: 0
-  season: {fileID: 0}
+  season: {fileID: 11400000, guid: a1bbecb2f91340848b79f2b8a40bf916, type: 2}
   dayOfWeek: 0
-  globalLightSource: {fileID: 0}
+  globalLightSource: {fileID: 2036757915}
 --- !u!114 &2012141750
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21170,7 +21299,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8117647, g: 0.8117647, b: 0.8117647, a: 1}
+  m_Color: {r: 0.3254902, g: 0.7490196, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -21431,9 +21560,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isCurrentDay: 0
-  season: {fileID: 0}
+  season: {fileID: 11400000, guid: 95a124760536b204b95d1dbfbea803d7, type: 2}
   dayOfWeek: 0
-  globalLightSource: {fileID: 0}
+  globalLightSource: {fileID: 2036757915}
 --- !u!114 &2050264652
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21447,7 +21576,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8117647, g: 0.8117647, b: 0.8117647, a: 1}
+  m_Color: {r: 1, g: 0.69146764, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -21523,9 +21652,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isCurrentDay: 0
-  season: {fileID: 0}
-  dayOfWeek: 0
-  globalLightSource: {fileID: 0}
+  season: {fileID: 11400000, guid: a1bbecb2f91340848b79f2b8a40bf916, type: 2}
+  dayOfWeek: 6
+  globalLightSource: {fileID: 2036757915}
 --- !u!114 &2087242925
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21539,7 +21668,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8113208, g: 0.8113208, b: 0.8113208, a: 1}
+  m_Color: {r: 0.3254902, g: 0.7490196, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

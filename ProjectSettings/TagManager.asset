@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Overworld
   - City
+  - Weather
   layers:
   - Default
   - TransparentFX

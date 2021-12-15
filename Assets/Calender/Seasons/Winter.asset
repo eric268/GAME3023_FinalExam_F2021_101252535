@@ -13,7 +13,6 @@ MonoBehaviour:
   m_Name: Winter
   m_EditorClassIdentifier: 
   seasonName: 3
-  weatherController: {fileID: 5799025816887434476, guid: 6f1aebeb7e9e2f844a6101f396d2115e, type: 3}
   hasWeather: 1
   dayLightStartHours: 7
   dayLightStartMinutes: 0

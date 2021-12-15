@@ -15,7 +15,6 @@ public enum SeasonName
 public class Season : ScriptableObject
 {
     public SeasonName seasonName;
-    public GameObject weatherController;
     public bool hasWeather;
 
     public float dayLightStartHours;

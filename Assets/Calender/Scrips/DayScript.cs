@@ -9,11 +9,15 @@ public class DayScript : MonoBehaviour
     public bool isCurrentDay;
     public Season season;
     public DaysOfWeek dayOfWeek;
-   
     public Light2D globalLightSource;
     private bool isPastNoon;
     private bool isNightTime, isDayTime;
-    //public Season currentSeason;
+
+
+    [Header("Day Specific Events")]
+    GameObject weatherObjectRef;
+    float weatherFrequency;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -88,7 +92,7 @@ public class DayScript : MonoBehaviour
         if (season.hasWeather)
         {
             //Can do a furthur check somewhere if we want a percentage change of weather
-            season.weatherController.SetActive(true);
+            //season.weatherController.SetActive(true);
         }
     }
 
@@ -97,9 +101,9 @@ public class DayScript : MonoBehaviour
         Debug.Log(gameObject.name + " disabled");
         isCurrentDay = false;
 
-        if (season.weatherController != null)
+        //if (season.weatherController != null)
         {
-            season.weatherController.SetActive(false);
+            //season.weatherController.SetActive(false);
         }
     }
 }
