@@ -14,9 +14,9 @@ public class Clock : MonoBehaviour
     public float minutesInHour;
     public float hoursInDay;
 
-    public float secondsCounter;
-    public float minutesCounter;
-    public float hourCounter;
+    public float seconds;
+    public float minutes;
+    public float hours;
 
     public event Action newDayEvent;
     // Start is called before the first frame update
@@ -42,19 +42,19 @@ public class Clock : MonoBehaviour
 
     void UpdateClock()
     {
-        secondsCounter += (Time.deltaTime * timeScale);
-        if (secondsCounter >= 1)
+        seconds += (Time.deltaTime * timeScale);
+        if (seconds >= 1)
         {
-            secondsCounter = 0;
-            minutesCounter++;
-            if (minutesCounter >= minutesInHour)
+            seconds = 0;
+            minutes++;
+            if (minutes >= minutesInHour)
             {
-                minutesCounter = 0;
-                hourCounter++;
+                minutes = 0;
+                hours++;
                 
-                if (hourCounter >= hoursInDay)
+                if (hours >= hoursInDay)
                 {
-                    hourCounter = 0;
+                    hours = 0;
                     if (newDayEvent != null)
                     {
                         newDayEvent();
