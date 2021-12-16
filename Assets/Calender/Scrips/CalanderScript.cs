@@ -45,10 +45,11 @@ public class CalanderScript : MonoBehaviour
         weatherRefArray = GameObject.FindGameObjectsWithTag("Weather");
         dayScriptArray = GetComponentsInChildren<DayScript>();
         totalNumberOfDays = dayScriptArray.Length;
-        DisableAllDaysOfCalender();
-        PopulateDaysWithNameAndSeason();
         currentDay = dayScriptArray[currentDayIndex].dayOfWeek;
         currentSeason = dayScriptArray[currentDayIndex].season.seasonName;
+        DisableAllDaysOfCalender();
+        PopulateDaysWithNameAndSeason();
+        GetComponent<TimeDateUI>().NewDay();
     }
 
     // Update is called once per frame
@@ -73,7 +74,7 @@ public class CalanderScript : MonoBehaviour
         currentDay = dayScriptArray[currentDayIndex].dayOfWeek;
         currentSeason = dayScriptArray[currentDayIndex].season.seasonName;
 
-        MoveCurrentDayIcon(dayScriptArray[currentDayIndex], IconCornerPos.Top_Right);
+        MoveCurrentDayIcon(dayScriptArray[currentDayIndex], IconCornerPos.Bottom_Right);
         ActiveDay = dayScriptArray[currentDayIndex];
 
     }
@@ -83,6 +84,7 @@ public class CalanderScript : MonoBehaviour
         int seasonIndex = -1;
         for (int i = 0; i < totalNumberOfDays; i++)
         {
+            dayScriptArray[i].dayNumber = (i + 1);
             dayScriptArray[i].dayOfWeek = (DaysOfWeek)(i % daysInWeek);
             
             if (i % daysInWeek == 0)
@@ -91,6 +93,7 @@ public class CalanderScript : MonoBehaviour
             dayScriptArray[i].season = seasonArray[seasonIndex];
             dayScriptArray[i].globalLightSource = globalLightSource;
             dayScriptArray[i].ChangeImageColorToMatchSeason();
+            dayScriptArray[i].AddDateTextInfo();
         }
 
         dayScriptArray[currentDayIndex].enabled = true;

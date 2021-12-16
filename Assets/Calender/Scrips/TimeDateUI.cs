@@ -14,7 +14,6 @@ public class TimeDateUI : MonoBehaviour
     {
         Clock.Instance().newDayEvent += NewDay;
         calander = GetComponent<CalanderScript>();
-        NewDay();
     }
 
     // Update is called once per frame

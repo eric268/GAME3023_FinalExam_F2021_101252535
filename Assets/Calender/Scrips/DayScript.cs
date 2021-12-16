@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Experimental.Rendering.Universal;
 using UnityEngine.UI;
+using TMPro;
 
 public class DayScript : MonoBehaviour
 {
@@ -18,15 +19,33 @@ public class DayScript : MonoBehaviour
     GameObject activeWeather;
     public float chanceOfWeather;
 
+    public int dayNumber;
+    TextMeshProUGUI dateText;
+
     // Start is called before the first frame update
     void Start()
     {
-
+       
     }
 
     public void ChangeImageColorToMatchSeason()
     {
         GetComponent<Image>().color = season.imageColor;
+    }
+
+    public void AddDateTextInfo()
+    {
+        dateText = GetComponentInChildren<TextMeshProUGUI>();
+        if (dateText != null)
+        {
+            dateText.text = dayOfWeek.ToString().Substring(0, 3) + "\n" + dayNumber;
+            dateText.gameObject.transform.localPosition = IconPositions.GetCornerOffset(IconCornerPos.Top_Center);
+        }
+        else
+        {
+            Debug.LogError("Day number: " + dayNumber + " missing date text component");
+        }
+
     }
 
     // Update is called once per frame
