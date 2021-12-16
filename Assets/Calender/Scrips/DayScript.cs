@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 public class DayScript : MonoBehaviour
 {
-    public bool isCurrentDay;
     public Season season;
     public DaysOfWeek dayOfWeek;
     public Light2D globalLightSource;
@@ -14,9 +13,10 @@ public class DayScript : MonoBehaviour
     private bool isNightTime, isDayTime;
 
 
-    [Header("Day Specific Events")]
-    GameObject weatherObjectRef;
-    float weatherFrequency;
+    [Header("Weather")]
+    public List<GameObject> listPossibleWeather;
+    GameObject activeWeather;
+    public float chanceOfWeather;
 
     // Start is called before the first frame update
     void Start()
@@ -32,10 +32,7 @@ public class DayScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isCurrentDay)
-        {
-            CheckDayLightChange();
-        }
+        CheckDayLightChange();
     }
 
     void CheckDayLightChange()
@@ -64,6 +61,7 @@ public class DayScript : MonoBehaviour
                 isDayTime = true;
                 isNightTime = false;
                 globalLightSource.intensity = season.daylightIntensity;
+                CheckToAddWeather();
             }
         }
     }
@@ -77,33 +75,48 @@ public class DayScript : MonoBehaviour
                 isDayTime = false;
                 isNightTime = true;
                 globalLightSource.intensity = season.nightTimeLightIntensity;
+                CheckToAddWeather();
+            }
+        }
+    }
+
+    void DeactivateCurrenWeatherSystem()
+    {
+        if (activeWeather != null && activeWeather.activeInHierarchy)
+        {
+            activeWeather.SetActive(false);
+        }
+    }
+
+    void CheckToAddWeather()
+    {
+        if (listPossibleWeather.Count > 0)
+        {
+            DeactivateCurrenWeatherSystem();
+            float frequencyCheck = Random.Range(0.0f, 1.0f);
+            if (frequencyCheck >= (1.0f - chanceOfWeather))
+            {
+
+                int selectWeatherType = Random.Range(0, listPossibleWeather.Count);
+                listPossibleWeather[selectWeatherType].SetActive(true);
+                activeWeather = listPossibleWeather[selectWeatherType];
             }
         }
     }
 
     private void OnEnable()
     {
-        Debug.Log(gameObject.name + " enabled");
-        isCurrentDay = true;
         isNightTime = true;
         isDayTime = false;
         globalLightSource.intensity = season.nightTimeLightIntensity;
         globalLightSource.color = season.daylightColor;
-        if (season.hasWeather)
-        {
-            //Can do a furthur check somewhere if we want a percentage change of weather
-            //season.weatherController.SetActive(true);
-        }
     }
 
     private void OnDisable()
     {
-        Debug.Log(gameObject.name + " disabled");
-        isCurrentDay = false;
-
-        //if (season.weatherController != null)
-        {
-            //season.weatherController.SetActive(false);
-        }
+        //if (activeWeather != null && activeWeather.activeInHierarchy)
+        //{
+        //    activeWeather.SetActive(false);
+        //}
     }
 }

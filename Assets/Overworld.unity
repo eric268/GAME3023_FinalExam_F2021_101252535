@@ -720,6 +720,11 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &22654199 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5799025816887434476, guid: 6f1aebeb7e9e2f844a6101f396d2115e, type: 3}
+  m_PrefabInstance: {fileID: 527937656}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &55503074
 GameObject:
   m_ObjectHideFlags: 0
@@ -770,10 +775,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 581a52d07470dff4f8b38bf80550397b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isCurrentDay: 0
   season: {fileID: 11400000, guid: 95a124760536b204b95d1dbfbea803d7, type: 2}
   dayOfWeek: 6
   globalLightSource: {fileID: 2036757915}
+  listPossibleWeather:
+  - {fileID: 194580327}
+  chanceOfWeather: 0.1
 --- !u!114 &55503077
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1028,10 +1035,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 581a52d07470dff4f8b38bf80550397b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isCurrentDay: 0
   season: {fileID: 11400000, guid: d3d5e72b731d3b640af32afe97df1a8d, type: 2}
   dayOfWeek: 0
   globalLightSource: {fileID: 2036757915}
+  listPossibleWeather:
+  - {fileID: 194580327}
+  - {fileID: 22654199}
+  chanceOfWeather: 0.5
 --- !u!1 &178666317
 GameObject:
   m_ObjectHideFlags: 0
@@ -1082,10 +1092,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 581a52d07470dff4f8b38bf80550397b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isCurrentDay: 0
   season: {fileID: 11400000, guid: 95a124760536b204b95d1dbfbea803d7, type: 2}
   dayOfWeek: 1
   globalLightSource: {fileID: 2036757915}
+  listPossibleWeather:
+  - {fileID: 194580327}
+  chanceOfWeather: 0.1
 --- !u!114 &178666320
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1124,6 +1136,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 178666317}
   m_CullTransparentMesh: 1
+--- !u!1 &194580327 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5056951705168689871, guid: b2f3511f2f65c45428b60588d98440e1, type: 3}
+  m_PrefabInstance: {fileID: 967073066}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &250871505
 GameObject:
   m_ObjectHideFlags: 0
@@ -1174,10 +1191,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 581a52d07470dff4f8b38bf80550397b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isCurrentDay: 0
   season: {fileID: 11400000, guid: 7b713e72322e3034792e437b4bea3ceb, type: 2}
   dayOfWeek: 1
   globalLightSource: {fileID: 2036757915}
+  listPossibleWeather:
+  - {fileID: 194580327}
+  chanceOfWeather: 0.1
 --- !u!114 &250871508
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1998,10 +2017,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 581a52d07470dff4f8b38bf80550397b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isCurrentDay: 0
   season: {fileID: 11400000, guid: d3d5e72b731d3b640af32afe97df1a8d, type: 2}
   dayOfWeek: 6
   globalLightSource: {fileID: 2036757915}
+  listPossibleWeather:
+  - {fileID: 194580327}
+  chanceOfWeather: 0.3
 --- !u!114 &399494413
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2090,10 +2111,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 581a52d07470dff4f8b38bf80550397b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isCurrentDay: 0
   season: {fileID: 11400000, guid: a1bbecb2f91340848b79f2b8a40bf916, type: 2}
   dayOfWeek: 5
   globalLightSource: {fileID: 2036757915}
+  listPossibleWeather:
+  - {fileID: 22654199}
+  chanceOfWeather: 0.5
 --- !u!114 &411447237
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2182,10 +2205,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 581a52d07470dff4f8b38bf80550397b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isCurrentDay: 0
   season: {fileID: 11400000, guid: a1bbecb2f91340848b79f2b8a40bf916, type: 2}
   dayOfWeek: 1
   globalLightSource: {fileID: 2036757915}
+  listPossibleWeather:
+  - {fileID: 22654199}
+  chanceOfWeather: 0.35
 --- !u!114 &428653791
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2274,10 +2299,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 581a52d07470dff4f8b38bf80550397b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isCurrentDay: 0
   season: {fileID: 11400000, guid: 7b713e72322e3034792e437b4bea3ceb, type: 2}
   dayOfWeek: 4
   globalLightSource: {fileID: 2036757915}
+  listPossibleWeather:
+  - {fileID: 194580327}
+  chanceOfWeather: 0.1
 --- !u!114 &493494862
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2752,10 +2779,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 581a52d07470dff4f8b38bf80550397b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isCurrentDay: 0
   season: {fileID: 11400000, guid: a1bbecb2f91340848b79f2b8a40bf916, type: 2}
   dayOfWeek: 4
   globalLightSource: {fileID: 2036757915}
+  listPossibleWeather:
+  - {fileID: 22654199}
+  chanceOfWeather: 0.5
 --- !u!114 &704825499
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2910,10 +2939,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 581a52d07470dff4f8b38bf80550397b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isCurrentDay: 0
   season: {fileID: 11400000, guid: 95a124760536b204b95d1dbfbea803d7, type: 2}
   dayOfWeek: 3
   globalLightSource: {fileID: 2036757915}
+  listPossibleWeather:
+  - {fileID: 194580327}
+  chanceOfWeather: 0.1
 --- !u!114 &722485819
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3002,10 +3033,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 581a52d07470dff4f8b38bf80550397b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isCurrentDay: 0
   season: {fileID: 11400000, guid: 95a124760536b204b95d1dbfbea803d7, type: 2}
   dayOfWeek: 2
   globalLightSource: {fileID: 2036757915}
+  listPossibleWeather:
+  - {fileID: 194580327}
+  chanceOfWeather: 0.1
 --- !u!114 &810370232
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3094,10 +3127,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 581a52d07470dff4f8b38bf80550397b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isCurrentDay: 0
   season: {fileID: 11400000, guid: a1bbecb2f91340848b79f2b8a40bf916, type: 2}
   dayOfWeek: 3
   globalLightSource: {fileID: 2036757915}
+  listPossibleWeather:
+  - {fileID: 22654199}
+  chanceOfWeather: 0.5
 --- !u!114 &956097383
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11541,10 +11576,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 581a52d07470dff4f8b38bf80550397b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isCurrentDay: 0
   season: {fileID: 11400000, guid: a1bbecb2f91340848b79f2b8a40bf916, type: 2}
   dayOfWeek: 2
   globalLightSource: {fileID: 2036757915}
+  listPossibleWeather:
+  - {fileID: 22654199}
+  chanceOfWeather: 0.35
 --- !u!114 &1045743904
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11633,10 +11670,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 581a52d07470dff4f8b38bf80550397b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isCurrentDay: 0
   season: {fileID: 11400000, guid: d3d5e72b731d3b640af32afe97df1a8d, type: 2}
   dayOfWeek: 3
   globalLightSource: {fileID: 2036757915}
+  listPossibleWeather:
+  - {fileID: 194580327}
+  chanceOfWeather: 0.5
 --- !u!114 &1101117907
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12142,7 +12181,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eea460e8675dea148b88a316483ab7f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  val: 20
 --- !u!4 &1166066100
 Transform:
   m_ObjectHideFlags: 0
@@ -12207,10 +12245,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 581a52d07470dff4f8b38bf80550397b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isCurrentDay: 0
   season: {fileID: 11400000, guid: 95a124760536b204b95d1dbfbea803d7, type: 2}
   dayOfWeek: 4
   globalLightSource: {fileID: 2036757915}
+  listPossibleWeather:
+  - {fileID: 194580327}
+  chanceOfWeather: 0.1
 --- !u!114 &1200922768
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17854,10 +17894,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 581a52d07470dff4f8b38bf80550397b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isCurrentDay: 0
   season: {fileID: 11400000, guid: 7b713e72322e3034792e437b4bea3ceb, type: 2}
   dayOfWeek: 3
   globalLightSource: {fileID: 2036757915}
+  listPossibleWeather:
+  - {fileID: 194580327}
+  chanceOfWeather: 0.1
 --- !u!114 &1327257361
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18021,10 +18063,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 581a52d07470dff4f8b38bf80550397b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isCurrentDay: 0
   season: {fileID: 11400000, guid: 7b713e72322e3034792e437b4bea3ceb, type: 2}
   dayOfWeek: 5
   globalLightSource: {fileID: 2036757915}
+  listPossibleWeather:
+  - {fileID: 194580327}
+  - {fileID: 22654199}
+  chanceOfWeather: 0.25
 --- !u!114 &1351616202
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18113,10 +18158,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 581a52d07470dff4f8b38bf80550397b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isCurrentDay: 0
   season: {fileID: 11400000, guid: d3d5e72b731d3b640af32afe97df1a8d, type: 2}
   dayOfWeek: 2
   globalLightSource: {fileID: 2036757915}
+  listPossibleWeather:
+  - {fileID: 194580327}
+  chanceOfWeather: 0.5
 --- !u!114 &1502737767
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18205,10 +18252,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 581a52d07470dff4f8b38bf80550397b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isCurrentDay: 0
   season: {fileID: 11400000, guid: d3d5e72b731d3b640af32afe97df1a8d, type: 2}
   dayOfWeek: 5
   globalLightSource: {fileID: 2036757915}
+  listPossibleWeather:
+  - {fileID: 194580327}
+  chanceOfWeather: 0.3
 --- !u!114 &1504786314
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18297,10 +18346,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 581a52d07470dff4f8b38bf80550397b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isCurrentDay: 0
   season: {fileID: 11400000, guid: d3d5e72b731d3b640af32afe97df1a8d, type: 2}
   dayOfWeek: 4
   globalLightSource: {fileID: 2036757915}
+  listPossibleWeather:
+  - {fileID: 194580327}
+  chanceOfWeather: 0.35
 --- !u!114 &1528888116
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18389,10 +18440,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 581a52d07470dff4f8b38bf80550397b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isCurrentDay: 0
   season: {fileID: 11400000, guid: d3d5e72b731d3b640af32afe97df1a8d, type: 2}
   dayOfWeek: 1
   globalLightSource: {fileID: 2036757915}
+  listPossibleWeather:
+  - {fileID: 194580327}
+  - {fileID: 22654199}
+  chanceOfWeather: 0.5
 --- !u!114 &1643219942
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18481,10 +18535,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 581a52d07470dff4f8b38bf80550397b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isCurrentDay: 0
   season: {fileID: 11400000, guid: 7b713e72322e3034792e437b4bea3ceb, type: 2}
   dayOfWeek: 0
   globalLightSource: {fileID: 2036757915}
+  listPossibleWeather:
+  - {fileID: 194580327}
+  chanceOfWeather: 0.1
 --- !u!114 &1654452894
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19652,10 +19708,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 581a52d07470dff4f8b38bf80550397b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isCurrentDay: 0
   season: {fileID: 11400000, guid: 7b713e72322e3034792e437b4bea3ceb, type: 2}
   dayOfWeek: 6
   globalLightSource: {fileID: 2036757915}
+  listPossibleWeather:
+  - {fileID: 194580327}
+  - {fileID: 22654199}
+  chanceOfWeather: 0.25
 --- !u!114 &1764473775
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19744,10 +19803,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 581a52d07470dff4f8b38bf80550397b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isCurrentDay: 0
   season: {fileID: 11400000, guid: 7b713e72322e3034792e437b4bea3ceb, type: 2}
   dayOfWeek: 2
   globalLightSource: {fileID: 2036757915}
+  listPossibleWeather:
+  - {fileID: 194580327}
+  chanceOfWeather: 0.1
 --- !u!114 &1782145625
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20000,10 +20061,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 581a52d07470dff4f8b38bf80550397b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isCurrentDay: 0
   season: {fileID: 11400000, guid: 95a124760536b204b95d1dbfbea803d7, type: 2}
   dayOfWeek: 5
   globalLightSource: {fileID: 2036757915}
+  listPossibleWeather:
+  - {fileID: 194580327}
+  chanceOfWeather: 0.1
 --- !u!114 &1975333565
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21282,10 +21345,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 581a52d07470dff4f8b38bf80550397b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isCurrentDay: 0
   season: {fileID: 11400000, guid: a1bbecb2f91340848b79f2b8a40bf916, type: 2}
   dayOfWeek: 0
   globalLightSource: {fileID: 2036757915}
+  listPossibleWeather:
+  - {fileID: 22654199}
+  chanceOfWeather: 0.25
 --- !u!114 &2012141750
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21559,10 +21624,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 581a52d07470dff4f8b38bf80550397b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isCurrentDay: 0
   season: {fileID: 11400000, guid: 95a124760536b204b95d1dbfbea803d7, type: 2}
   dayOfWeek: 0
   globalLightSource: {fileID: 2036757915}
+  listPossibleWeather:
+  - {fileID: 194580327}
+  chanceOfWeather: 0.1
 --- !u!114 &2050264652
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21651,10 +21718,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 581a52d07470dff4f8b38bf80550397b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isCurrentDay: 0
   season: {fileID: 11400000, guid: a1bbecb2f91340848b79f2b8a40bf916, type: 2}
   dayOfWeek: 6
   globalLightSource: {fileID: 2036757915}
+  listPossibleWeather:
+  - {fileID: 22654199}
+  chanceOfWeather: 0.5
 --- !u!114 &2087242925
 MonoBehaviour:
   m_ObjectHideFlags: 0
