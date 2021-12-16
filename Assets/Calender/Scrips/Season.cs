@@ -24,6 +24,7 @@ public class Season : ScriptableObject
     public float nightTimeStartsMinutes;
 
     public float daylightIntensity;
+
     public float nightTimeLightIntensity;
 
     public Color daylightColor;

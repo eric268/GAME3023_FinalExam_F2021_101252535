@@ -19,6 +19,8 @@ MonoBehaviour:
   nightTimeStartsHours: 19
   nightTimeStartsMinutes: 30
   daylightIntensity: 0.75
+  minLightIntensityOffset: 0.7
+  maxLightIntensityOffset: 1.3
   nightTimeLightIntensity: 0.2
   daylightColor: {r: 0.9143868, g: 1, b: 0.740566, a: 1}
   imageColor: {r: 0.30588236, g: 1, b: 0, a: 1}

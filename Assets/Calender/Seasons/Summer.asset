@@ -13,13 +13,14 @@ MonoBehaviour:
   m_Name: Summer
   m_EditorClassIdentifier: 
   seasonName: 1
-  weatherController: {fileID: 0}
   hasWeather: 0
   dayLightStartHours: 6
   dayLightStartMinutes: 0
   nightTimeStartsHours: 21
   nightTimeStartsMinutes: 30
   daylightIntensity: 1
+  minLightIntensityOffset: 0.9
+  maxLightIntensityOffset: 1.4
   nightTimeLightIntensity: 0.2
   daylightColor: {r: 1, g: 0.9235849, b: 0.6179246, a: 1}
   imageColor: {r: 1, g: 0.69146764, b: 0, a: 1}

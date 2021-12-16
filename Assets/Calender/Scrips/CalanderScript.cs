@@ -24,8 +24,7 @@ public class CalanderScript : MonoBehaviour
     public int daysInWeek;
 
     DayScript[] dayScriptArray;
-    GameObject[] weatherRefArray;
-    Clock clock;
+
     public Light2D globalLightSource;
     public Season[] seasonArray;
     public DaysOfWeek currentDay;
@@ -42,7 +41,6 @@ public class CalanderScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        weatherRefArray = GameObject.FindGameObjectsWithTag("Weather");
         dayScriptArray = GetComponentsInChildren<DayScript>();
         totalNumberOfDays = dayScriptArray.Length;
         currentDay = dayScriptArray[currentDayIndex].dayOfWeek;
@@ -55,7 +53,6 @@ public class CalanderScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("Hour: " + Clock.Instance().hours + " Minute: " + Clock.Instance().minutes);
     }
 
     void DisableAllDaysOfCalender()
@@ -68,12 +65,11 @@ public class CalanderScript : MonoBehaviour
 
     public void NewDay()
     {
+        StopPlayingPreviousDayAudio();
         dayScriptArray[currentDayIndex++].enabled = false;
         dayScriptArray[currentDayIndex].enabled = true;
-
         currentDay = dayScriptArray[currentDayIndex].dayOfWeek;
         currentSeason = dayScriptArray[currentDayIndex].season.seasonName;
-
         MoveCurrentDayIcon(dayScriptArray[currentDayIndex], IconCornerPos.Bottom_Right);
         ActiveDay = dayScriptArray[currentDayIndex];
 
@@ -102,11 +98,14 @@ public class CalanderScript : MonoBehaviour
         ActiveDay = dayScriptArray[currentDayIndex];
     }
 
-    void UpdateDayChanged()
+    void CurrentDayChanedInInspector()
     {
         if (ActiveDay != null && ActiveDay != dayScriptArray[currentDayIndex])
         {
+            StopPlayingPreviousDayAudio();
+            ActiveDay.DeactivateCurrenWeatherSystem();
             ActiveDay.enabled = false;
+
             dayScriptArray[currentDayIndex].enabled = true;
             ActiveDay = dayScriptArray[currentDayIndex];
 
@@ -123,6 +122,24 @@ public class CalanderScript : MonoBehaviour
         }
     }
 
+    void MoveCurrentDayIcon(DayScript day, IconCornerPos pos)
+    {
+        currentDayIcon.transform.SetParent(day.transform);
+        currentDayIcon.transform.localPosition = IconPositions.GetCornerOffset(pos);
+    }
+
+    private void StopPlayingPreviousDayAudio()
+    {
+        //Check if the day has an audio event script
+        //Since an audiosource is a requirement component then we know it also has an AudioSource component
+        if (ActiveDay.GetComponent<AudioEvent>())
+        {
+            //Stop it from playing
+            ActiveDay.GetComponent<AudioSource>().Stop();
+        }
+    }
+
+
     public void OnValidate()
     {
         if (currentDayIndex > totalNumberOfDays - 1)
@@ -131,13 +148,7 @@ public class CalanderScript : MonoBehaviour
         }
         else if (totalNumberOfDays > 0)
         {
-            UpdateDayChanged();
+            CurrentDayChanedInInspector();
         }
-    }
-
-    void MoveCurrentDayIcon(DayScript day, IconCornerPos pos)
-    {
-        currentDayIcon.transform.SetParent(day.transform);
-        currentDayIcon.transform.localPosition = IconPositions.GetCornerOffset(pos);
     }
 }

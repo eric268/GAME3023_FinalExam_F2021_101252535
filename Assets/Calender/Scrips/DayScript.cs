@@ -13,7 +13,6 @@ public class DayScript : MonoBehaviour
     private bool isPastNoon;
     private bool isNightTime, isDayTime;
 
-
     [Header("Weather")]
     public List<GameObject> listPossibleWeather;
     GameObject activeWeather;
@@ -21,11 +20,17 @@ public class DayScript : MonoBehaviour
 
     public int dayNumber;
     TextMeshProUGUI dateText;
+    public GameObject specialEventIcon;
+    public bool hasSpecialEvent;
+
+    public Color dayLightColor;
+    public float nightLightIntensity;
+    public float dayLightIntensity;
 
     // Start is called before the first frame update
     void Start()
     {
-       
+
     }
 
     public void ChangeImageColorToMatchSeason()
@@ -79,7 +84,8 @@ public class DayScript : MonoBehaviour
             {
                 isDayTime = true;
                 isNightTime = false;
-                globalLightSource.intensity = season.daylightIntensity;
+                globalLightSource.intensity = dayLightIntensity;
+
                 CheckToAddWeather();
             }
         }
@@ -93,17 +99,17 @@ public class DayScript : MonoBehaviour
             {
                 isDayTime = false;
                 isNightTime = true;
-                globalLightSource.intensity = season.nightTimeLightIntensity;
+                globalLightSource.intensity = nightLightIntensity;
                 CheckToAddWeather();
             }
         }
     }
 
-    void DeactivateCurrenWeatherSystem()
+    public void DeactivateCurrenWeatherSystem()
     {
-        if (activeWeather != null && activeWeather.activeInHierarchy)
+        foreach(GameObject weather in listPossibleWeather)
         {
-            activeWeather.SetActive(false);
+            weather.SetActive(false);
         }
     }
 
@@ -127,15 +133,23 @@ public class DayScript : MonoBehaviour
     {
         isNightTime = true;
         isDayTime = false;
-        globalLightSource.intensity = season.nightTimeLightIntensity;
-        globalLightSource.color = season.daylightColor;
+
+        dayLightColor = season.daylightColor;
+        nightLightIntensity = season.nightTimeLightIntensity;
+        dayLightIntensity = season.daylightIntensity;
+
+        globalLightSource.intensity = nightLightIntensity;
+        globalLightSource.color = dayLightColor;
     }
 
-    private void OnDisable()
+    private void OnValidate()
     {
-        //if (activeWeather != null && activeWeather.activeInHierarchy)
-        //{
-        //    activeWeather.SetActive(false);
-        //}
+        if (hasSpecialEvent)
+        {
+            specialEventIcon.SetActive(true);
+        }
+        else
+            specialEventIcon.SetActive(false);
+
     }
 }
