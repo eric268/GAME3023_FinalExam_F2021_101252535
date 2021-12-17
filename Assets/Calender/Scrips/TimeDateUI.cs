@@ -12,6 +12,7 @@ public class TimeDateUI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //Bind the script to the new day event in the clock to update it correctly
         Clock.Instance().newDayEvent += NewDay;
         calander = GetComponent<CalanderScript>();
     }
@@ -19,6 +20,7 @@ public class TimeDateUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Always want to display digits to 2 digit
         timeText.SetText("Time: {0:00} : {1:00}", Clock.Instance().hours, Clock.Instance().minutes);
     }
 

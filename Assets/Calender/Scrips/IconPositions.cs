@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//For adding icons to different areas of the calendar 
 public enum IconCornerPos
 {
     Top_Right,
@@ -13,7 +14,7 @@ public enum IconCornerPos
     Left_Center,
     Right_Center
 }
-
+//Helper class for getting local position of icon placements around day icon
 public class IconPositions
 {
     public static Vector2 GetCornerOffset(IconCornerPos pos)

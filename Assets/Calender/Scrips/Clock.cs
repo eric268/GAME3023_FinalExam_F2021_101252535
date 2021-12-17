@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
+//Singleton
 [System.Serializable]
 public class Clock : MonoBehaviour
 {
@@ -18,12 +19,10 @@ public class Clock : MonoBehaviour
     public float minutes;
     public float hours;
 
+    //Event that should be subscribed to when day changes
     public event Action newDayEvent;
-    // Start is called before the first frame update
-    void Start()
-    {
-    }
 
+    //Access instance of singleton
     public static Clock Instance()
     {
         if (m_instance == null)

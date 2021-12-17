@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
+//This class is used to display the messages that describe special day events
 public class SpecialEventDescription : MonoBehaviour
 {
     public GameObject specialEventMessgaeBox;
     public string specialEventMessage = "Special Event: None";
 
+    //Start showing text box and message
     public void MouseEnterEventIcon()
     {
         if (specialEventMessgaeBox)
@@ -21,7 +23,7 @@ public class SpecialEventDescription : MonoBehaviour
         }
 
     }
-
+    //Stop showing text box and message
     public void MouseExitEventIcon()
     {
         specialEventMessgaeBox.SetActive(false);

@@ -13,15 +13,22 @@ public enum TypeOfAudioEvent
 [RequireComponent(typeof(DayScript))]
 public class AudioEvent : MonoBehaviour
 {
+    [Header("General Audio")]
     public TypeOfAudioEvent eventType;
     public AudioClip clipToPlay;
-    public Rigidbody2D rigidBodyOfPlayOnMoveSource;
     public float audioVolume;
+
+    [Header("Audio Connected")]
+    public Rigidbody2D rigidBodyOfPlayOnMoveSource;
+
     AudioSource audioSource;
 
+    [Header("Random Audio")]
     public int randomChecksToPlayAudioPerHour;
     public float randomizedSoundPercentage;
     // Start is called before the first frame update
+
+    //Want to make sure we arent looping or playing on start
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
@@ -29,12 +36,13 @@ public class AudioEvent : MonoBehaviour
         audioSource.loop = false;
     }
 
+    //Allows use to choose different audio events
     void CheckWhichAudioEventToPlay(TypeOfAudioEvent type)
     {
         switch(type)
         {
             case TypeOfAudioEvent.OnObjectMovement:
-                PlayOnPlayerMovement();
+                PlayOnObjectMovement();
                 break;
             case TypeOfAudioEvent.Persistent:
                 PlayPersistentAudio();
@@ -45,8 +53,8 @@ public class AudioEvent : MonoBehaviour
 
         }
     }
-
-    void PlayOnPlayerMovement()
+    //Allows audio to play when bound to an objects movement
+    void PlayOnObjectMovement()
     {
         float playerVelocity = rigidBodyOfPlayOnMoveSource.velocity.magnitude;
         if (playerVelocity > 0.01f)
@@ -62,6 +70,7 @@ public class AudioEvent : MonoBehaviour
         }
     }
 
+    //Plays audio for entire day
     void PlayPersistentAudio()
     {
         if (!audioSource.isPlaying)
@@ -70,15 +79,17 @@ public class AudioEvent : MonoBehaviour
             audioSource.PlayOneShot(clipToPlay, audioVolume);
         }
     }
-
+    //Randomly plays an audio clip
     void PlayAudioRandom()
     {
+        //Player can select how many times per hour an audio clip is attempted to be played
         float checkInterval = Mathf.Round((Clock.Instance().minutesInHour - 1) / randomChecksToPlayAudioPerHour);
         if (Clock.Instance().minutes == checkInterval)
         {
             if (randomizedSoundPercentage > 1.0f)
                 randomizedSoundPercentage = 1.0f;
 
+            //Player can set how likly an audio clip is played when checked
             float ranNum = Random.Range(0.0f, 1.0f);
             if (ranNum > (1 - randomizedSoundPercentage))
             {
@@ -90,7 +101,6 @@ public class AudioEvent : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (GetComponent<DayScript>().enabled == true)

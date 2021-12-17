@@ -16,7 +16,6 @@ public class ToggleCalender : MonoBehaviour
         rectTransform = GetComponent<RectTransform>();
         startingWidth = GetComponent<RectTransform>().rect.width;
         startingHeight = GetComponent<RectTransform>().rect.height;
-
     }
 
     // Update is called once per frame
@@ -24,7 +23,9 @@ public class ToggleCalender : MonoBehaviour
     {
         
     }
-
+    //This is a workaround for not disabling the calendar when toggling off
+    //This is needed because the active day script needs to run even while calendar isnt show
+    //This stops calendar from being shown but still allows attached active scripts to run
     public void ToggleRenderer()
     {
         isVisible = !isVisible;

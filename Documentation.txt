@@ -29,6 +29,13 @@ Creating new season
 4. In calendar script add the season to correct place in season array
 *Important* The season must be placed in the correct position of array for it to appear in order
 
+Adding icons to different areas of each day
+1. Static function inside IconPositions.cs class
+2. Use GetCornerOffset function
+3. Add an IconCornerPos to select the position of the icon accordingly
+4. Set the icon as a child of the object the day script is attached to
+5. Set the local position to the return type of the GetCornerOffset function
+
 Future Development
  - Very easy to make new day specific events. Simply create a script that will alter some of the season or day characteristics and add it to 
    the day you wish to alter. They can all be accessed via the dayscript.cs

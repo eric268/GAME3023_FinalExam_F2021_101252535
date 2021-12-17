@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Add newly created season names here
 public enum SeasonName
 {
     Spring,

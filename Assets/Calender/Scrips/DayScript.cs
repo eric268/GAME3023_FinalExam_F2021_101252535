@@ -7,38 +7,38 @@ using TMPro;
 
 public class DayScript : MonoBehaviour
 {
+    [Header("Season")]
     public Season season;
     public DaysOfWeek dayOfWeek;
     public Light2D globalLightSource;
-    private bool isPastNoon;
-    private bool isNightTime, isDayTime;
+    public Color dayLightColor;
+    public float nightLightIntensity;
+    public float dayLightIntensity;
 
     [Header("Weather")]
     public List<GameObject> listPossibleWeather;
     GameObject activeWeather;
     public float chanceOfWeather;
 
+    [Header("Day UI")]
     public int dayNumber;
     TextMeshProUGUI dateText;
     public GameObject currentDayIcon;
     public GameObject specialEventIcon;
+
+    [Header("Special Event")]
     public bool hasSpecialEvent;
 
-    public Color dayLightColor;
-    public float nightLightIntensity;
-    public float dayLightIntensity;
+    private bool isPastNoon;
+    private bool isNightTime, isDayTime;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
+    //Changes day icon to correct color
     public void ChangeImageColorToMatchSeason()
     {
         GetComponent<Image>().color = season.imageColor;
     }
 
+    //Adds correct day and 3 letter name UI to each day
     public void AddDateTextInfo()
     {
         dateText = GetComponentInChildren<TextMeshProUGUI>();
@@ -60,6 +60,7 @@ public class DayScript : MonoBehaviour
         CheckDayLightChange();
     }
 
+    //Check if changed to night or day time
     void CheckDayLightChange()
     {
         if (Clock.Instance().hours < 12)
@@ -79,6 +80,7 @@ public class DayScript : MonoBehaviour
 
     void CheckIfDaytime()
     {
+        //Only want to check if we should change from night to daytime when it isnt daytime
         if (!isDayTime)
         {
             if (Clock.Instance().hours >= season.dayLightStartHours && Clock.Instance().minutes > season.dayLightStartMinutes)
@@ -87,6 +89,7 @@ public class DayScript : MonoBehaviour
                 isNightTime = false;
                 globalLightSource.intensity = dayLightIntensity;
 
+                //Checks for weather changes
                 CheckToAddWeather();
             }
         }
@@ -94,6 +97,7 @@ public class DayScript : MonoBehaviour
 
     void CheckIfNightime()
     {
+        //Only want to check when currently daytime
         if (!isNightTime)
         {
             if (Clock.Instance().hours >= season.nightTimeStartsHours && Clock.Instance().minutes > season.nightTimeStartsMinutes)
@@ -106,6 +110,7 @@ public class DayScript : MonoBehaviour
         }
     }
 
+    //Used to disable all weather systems
     public void DeactivateCurrenWeatherSystem()
     {
         foreach(GameObject weather in listPossibleWeather)
@@ -118,11 +123,14 @@ public class DayScript : MonoBehaviour
     {
         if (listPossibleWeather.Count > 0)
         {
+            //Don't want multiple weather systems playing at once
             DeactivateCurrenWeatherSystem();
+
+            //Does randomization to see if weather should play
             float frequencyCheck = Random.Range(0.01f, 1.0f);
             if (frequencyCheck >= (1.0f - chanceOfWeather))
             {
-
+                //Randomly selects a weather system to play if there are multiple
                 int selectWeatherType = Random.Range(0, listPossibleWeather.Count);
                 listPossibleWeather[selectWeatherType].SetActive(true);
                 activeWeather = listPossibleWeather[selectWeatherType];
@@ -130,6 +138,7 @@ public class DayScript : MonoBehaviour
         }
     }
 
+    //Activates a lot of day specific functionality and attributes
     private void OnEnable()
     {
         isNightTime = true;
@@ -144,12 +153,13 @@ public class DayScript : MonoBehaviour
         currentDayIcon.SetActive(true);
     }
 
+    //Stop showing that it is the current day
     private void OnDisable()
     {
         currentDayIcon.SetActive(false);
     }
 
-
+    //Show the current day icon is has special event is true
     private void OnValidate()
     {
         if (hasSpecialEvent)
