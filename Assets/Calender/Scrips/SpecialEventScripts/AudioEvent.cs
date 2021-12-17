@@ -4,7 +4,7 @@ using UnityEngine;
 
 public enum TypeOfAudioEvent
 {
-    OnPlayerMovement,
+    OnObjectMovement,
     Persistent,
     Random,
 }
@@ -15,7 +15,7 @@ public class AudioEvent : MonoBehaviour
 {
     public TypeOfAudioEvent eventType;
     public AudioClip clipToPlay;
-    public Rigidbody2D playerRigidBody;
+    public Rigidbody2D rigidBodyOfPlayOnMoveSource;
     public float audioVolume;
     AudioSource audioSource;
 
@@ -33,7 +33,7 @@ public class AudioEvent : MonoBehaviour
     {
         switch(type)
         {
-            case TypeOfAudioEvent.OnPlayerMovement:
+            case TypeOfAudioEvent.OnObjectMovement:
                 PlayOnPlayerMovement();
                 break;
             case TypeOfAudioEvent.Persistent:
@@ -48,7 +48,7 @@ public class AudioEvent : MonoBehaviour
 
     void PlayOnPlayerMovement()
     {
-        float playerVelocity = playerRigidBody.velocity.magnitude;
+        float playerVelocity = rigidBodyOfPlayOnMoveSource.velocity.magnitude;
         if (playerVelocity > 0.01f)
         {
             if (!audioSource.isPlaying)

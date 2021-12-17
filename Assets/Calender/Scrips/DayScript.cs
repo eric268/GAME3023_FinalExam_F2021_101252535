@@ -20,6 +20,7 @@ public class DayScript : MonoBehaviour
 
     public int dayNumber;
     TextMeshProUGUI dateText;
+    public GameObject currentDayIcon;
     public GameObject specialEventIcon;
     public bool hasSpecialEvent;
 
@@ -118,7 +119,7 @@ public class DayScript : MonoBehaviour
         if (listPossibleWeather.Count > 0)
         {
             DeactivateCurrenWeatherSystem();
-            float frequencyCheck = Random.Range(0.0f, 1.0f);
+            float frequencyCheck = Random.Range(0.01f, 1.0f);
             if (frequencyCheck >= (1.0f - chanceOfWeather))
             {
 
@@ -140,7 +141,14 @@ public class DayScript : MonoBehaviour
 
         globalLightSource.intensity = nightLightIntensity;
         globalLightSource.color = dayLightColor;
+        currentDayIcon.SetActive(true);
     }
+
+    private void OnDisable()
+    {
+        currentDayIcon.SetActive(false);
+    }
+
 
     private void OnValidate()
     {
@@ -150,6 +158,5 @@ public class DayScript : MonoBehaviour
         }
         else
             specialEventIcon.SetActive(false);
-
     }
 }

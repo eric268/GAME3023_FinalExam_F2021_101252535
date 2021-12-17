@@ -17,7 +17,7 @@ public class SpecialEventDescription : MonoBehaviour
         }
         else
         {
-            Debug.Log("Please attach special event message box game object to special event icon");
+            Debug.Log("Unable to find special event message box game object to special event icon");
         }
 
     }

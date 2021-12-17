@@ -21,7 +21,7 @@ public class CalanderScript : MonoBehaviour
 
     static int totalNumberOfDays;
     public int currentDayIndex;
-    public int daysInWeek;
+    public int daysInSeason;
 
     DayScript[] dayScriptArray;
 
@@ -29,8 +29,6 @@ public class CalanderScript : MonoBehaviour
     public Season[] seasonArray;
     public DaysOfWeek currentDay;
     public SeasonName currentSeason;
-
-    public GameObject currentDayIcon;
 
 
     private void Awake()
@@ -43,11 +41,12 @@ public class CalanderScript : MonoBehaviour
     {
         dayScriptArray = GetComponentsInChildren<DayScript>();
         totalNumberOfDays = dayScriptArray.Length;
-        currentDay = dayScriptArray[currentDayIndex].dayOfWeek;
-        currentSeason = dayScriptArray[currentDayIndex].season.seasonName;
         DisableAllDaysOfCalender();
         PopulateDaysWithNameAndSeason();
+        currentDay = dayScriptArray[currentDayIndex].dayOfWeek;
+        currentSeason = dayScriptArray[currentDayIndex].season.seasonName;
         GetComponent<TimeDateUI>().NewDay();
+
     }
 
     // Update is called once per frame
@@ -70,7 +69,6 @@ public class CalanderScript : MonoBehaviour
         dayScriptArray[currentDayIndex].enabled = true;
         currentDay = dayScriptArray[currentDayIndex].dayOfWeek;
         currentSeason = dayScriptArray[currentDayIndex].season.seasonName;
-        MoveCurrentDayIcon(dayScriptArray[currentDayIndex], IconCornerPos.Bottom_Right);
         ActiveDay = dayScriptArray[currentDayIndex];
 
     }
@@ -81,10 +79,15 @@ public class CalanderScript : MonoBehaviour
         for (int i = 0; i < totalNumberOfDays; i++)
         {
             dayScriptArray[i].dayNumber = (i + 1);
-            dayScriptArray[i].dayOfWeek = (DaysOfWeek)(i % daysInWeek);
+            dayScriptArray[i].dayOfWeek = (DaysOfWeek)(i % daysInSeason);
             
-            if (i % daysInWeek == 0)
+            if (i % daysInSeason == 0)
+            {
                 seasonIndex++;
+                if (seasonIndex >= seasonArray.Length)
+                    seasonIndex = 0;
+            }
+
 
             dayScriptArray[i].season = seasonArray[seasonIndex];
             dayScriptArray[i].globalLightSource = globalLightSource;
@@ -109,8 +112,6 @@ public class CalanderScript : MonoBehaviour
             dayScriptArray[currentDayIndex].enabled = true;
             ActiveDay = dayScriptArray[currentDayIndex];
 
-            MoveCurrentDayIcon(dayScriptArray[currentDayIndex], IconCornerPos.Top_Right);
-
             Clock.Instance().hours = 0;
             Clock.Instance().minutes = 0;
             Clock.Instance().seconds = 0;
@@ -120,12 +121,6 @@ public class CalanderScript : MonoBehaviour
 
             GetComponent<TimeDateUI>().NewDay();
         }
-    }
-
-    void MoveCurrentDayIcon(DayScript day, IconCornerPos pos)
-    {
-        currentDayIcon.transform.SetParent(day.transform);
-        currentDayIcon.transform.localPosition = IconPositions.GetCornerOffset(pos);
     }
 
     private void StopPlayingPreviousDayAudio()
@@ -142,7 +137,7 @@ public class CalanderScript : MonoBehaviour
 
     public void OnValidate()
     {
-        if (currentDayIndex > totalNumberOfDays - 1)
+        if (currentDayIndex > totalNumberOfDays - 1 || currentDayIndex < 0)
         {
             currentDayIndex = 0;
         }
@@ -150,5 +145,7 @@ public class CalanderScript : MonoBehaviour
         {
             CurrentDayChanedInInspector();
         }
+        if (daysInSeason < 0)
+            daysInSeason = 1;
     }
 }

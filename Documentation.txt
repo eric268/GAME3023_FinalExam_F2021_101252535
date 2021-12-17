@@ -1,0 +1,34 @@
+Adding an event to a day
+1. Ensure that the special event boolean is true
+2. Drag and drop the appropriate event script to the object
+3. Select the appropriate event enum signifier and fill in appropriate information
+4. Go to the special event icon found as a child of the day and put in the custom event message
+
+Adding a day to a calendar
+1. Drag prefab day into scene and add it as a child to an object with calendar script
+2. **Important** Drag whatever is being used to render out the special events message and connect it to the special event icon child
+3. Fill out remaining information like adding weather systems or changing the special event icon
+
+Changing weather system
+1. Go to the day script
+2. Increase or decrease weather array and add or remove weather system
+3. Under weather system array add the percentage from 0.0 - 1.0 of a weather system occurring
+*Important* Weather systems currently only change when a night to day event occurs or day to night event occurs*
+*Currently if a day has multiple weather systems they all have an equal chance of being selected*
+
+Changing Time
+1. Find the object with the clock script (Probably calendar parent object)
+2. Change time scale from 0 - whatever value
+3. Increasing time scale speeds up time
+4. Setting time scale to 0 pauses game 
+
+Creating new season
+1. Create season via scriptable object found in Create/Calendar/season
+2. Fill out appropriate data/attributes
+3. In season.cs script add season name
+4. In calendar script add the season to correct place in season array
+*Important* The season must be placed in the correct position of array for it to appear in order
+
+Future Development
+ - Very easy to make new day specific events. Simply create a script that will alter some of the season or day characteristics and add it to 
+   the day you wish to alter. They can all be accessed via the dayscript.cs
