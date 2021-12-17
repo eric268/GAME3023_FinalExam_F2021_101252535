@@ -1157,6 +1157,9 @@ MonoBehaviour:
   season: {fileID: 11400000, guid: 95a124760536b204b95d1dbfbea803d7, type: 2}
   dayOfWeek: 6
   globalLightSource: {fileID: 2036757915}
+  dayLightColor: {r: 0, g: 0, b: 0, a: 0}
+  nightLightIntensity: 0
+  dayLightIntensity: 0
   listPossibleWeather:
   - {fileID: 194580327}
   chanceOfWeather: 0.1
@@ -1164,9 +1167,6 @@ MonoBehaviour:
   currentDayIcon: {fileID: 915356969}
   specialEventIcon: {fileID: 617896196}
   hasSpecialEvent: 1
-  dayLightColor: {r: 0, g: 0, b: 0, a: 0}
-  nightLightIntensity: 0
-  dayLightIntensity: 0
 --- !u!114 &55503077
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1791,6 +1791,9 @@ MonoBehaviour:
   season: {fileID: 11400000, guid: d3d5e72b731d3b640af32afe97df1a8d, type: 2}
   dayOfWeek: 0
   globalLightSource: {fileID: 2036757915}
+  dayLightColor: {r: 0, g: 0, b: 0, a: 0}
+  nightLightIntensity: 0
+  dayLightIntensity: 0
   listPossibleWeather:
   - {fileID: 194580327}
   - {fileID: 22654199}
@@ -1799,9 +1802,6 @@ MonoBehaviour:
   currentDayIcon: {fileID: 2009415500}
   specialEventIcon: {fileID: 891634874}
   hasSpecialEvent: 1
-  dayLightColor: {r: 0, g: 0, b: 0, a: 0}
-  nightLightIntensity: 0
-  dayLightIntensity: 0
 --- !u!114 &115628689
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1816,8 +1816,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventType: 1
   clipToPlay: {fileID: 8300000, guid: b2aa0de103c69a242b7ea9e66ca9c341, type: 3}
-  rigidBodyOfPlayOnMoveSource: {fileID: 0}
   audioVolume: 0.3
+  rigidBodyOfPlayOnMoveSource: {fileID: 0}
   randomChecksToPlayAudioPerHour: 0
   randomizedSoundPercentage: 0
 --- !u!82 &115628690
@@ -2110,6 +2110,9 @@ MonoBehaviour:
   season: {fileID: 11400000, guid: 95a124760536b204b95d1dbfbea803d7, type: 2}
   dayOfWeek: 1
   globalLightSource: {fileID: 2036757915}
+  dayLightColor: {r: 0, g: 0, b: 0, a: 0}
+  nightLightIntensity: 0
+  dayLightIntensity: 0
   listPossibleWeather:
   - {fileID: 194580327}
   chanceOfWeather: 0.1
@@ -2117,9 +2120,6 @@ MonoBehaviour:
   currentDayIcon: {fileID: 906907049}
   specialEventIcon: {fileID: 901691482}
   hasSpecialEvent: 1
-  dayLightColor: {r: 0, g: 0, b: 0, a: 0}
-  nightLightIntensity: 0
-  dayLightIntensity: 0
 --- !u!114 &178666320
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2172,8 +2172,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventType: 2
   clipToPlay: {fileID: 8300000, guid: 3176dc496e292cf4baafa0b1051673e0, type: 3}
-  rigidBodyOfPlayOnMoveSource: {fileID: 0}
   audioVolume: 0.5
+  rigidBodyOfPlayOnMoveSource: {fileID: 0}
   randomChecksToPlayAudioPerHour: 1
   randomizedSoundPercentage: 0.3
 --- !u!82 &178666323
@@ -2742,6 +2742,9 @@ MonoBehaviour:
   season: {fileID: 11400000, guid: 7b713e72322e3034792e437b4bea3ceb, type: 2}
   dayOfWeek: 1
   globalLightSource: {fileID: 2036757915}
+  dayLightColor: {r: 0, g: 0, b: 0, a: 0}
+  nightLightIntensity: 0
+  dayLightIntensity: 0
   listPossibleWeather:
   - {fileID: 194580327}
   chanceOfWeather: 0.1
@@ -2749,9 +2752,6 @@ MonoBehaviour:
   currentDayIcon: {fileID: 1186935164}
   specialEventIcon: {fileID: 1971042618}
   hasSpecialEvent: 0
-  dayLightColor: {r: 0, g: 0, b: 0, a: 0}
-  nightLightIntensity: 0
-  dayLightIntensity: 0
 --- !u!114 &250871508
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4198,6 +4198,9 @@ MonoBehaviour:
   season: {fileID: 11400000, guid: d3d5e72b731d3b640af32afe97df1a8d, type: 2}
   dayOfWeek: 6
   globalLightSource: {fileID: 2036757915}
+  dayLightColor: {r: 0, g: 0, b: 0, a: 0}
+  nightLightIntensity: 0
+  dayLightIntensity: 0
   listPossibleWeather:
   - {fileID: 194580327}
   chanceOfWeather: 0.3
@@ -4205,9 +4208,6 @@ MonoBehaviour:
   currentDayIcon: {fileID: 588435022}
   specialEventIcon: {fileID: 2065571326}
   hasSpecialEvent: 0
-  dayLightColor: {r: 0, g: 0, b: 0, a: 0}
-  nightLightIntensity: 0
-  dayLightIntensity: 0
 --- !u!114 &399494413
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4302,6 +4302,9 @@ MonoBehaviour:
   season: {fileID: 11400000, guid: a1bbecb2f91340848b79f2b8a40bf916, type: 2}
   dayOfWeek: 5
   globalLightSource: {fileID: 2036757915}
+  dayLightColor: {r: 0, g: 0, b: 0, a: 0}
+  nightLightIntensity: 0
+  dayLightIntensity: 0
   listPossibleWeather:
   - {fileID: 22654199}
   chanceOfWeather: 0.5
@@ -4309,9 +4312,6 @@ MonoBehaviour:
   currentDayIcon: {fileID: 419546830}
   specialEventIcon: {fileID: 1375949238}
   hasSpecialEvent: 0
-  dayLightColor: {r: 0, g: 0, b: 0, a: 0}
-  nightLightIntensity: 0
-  dayLightIntensity: 0
 --- !u!114 &411447237
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4481,6 +4481,9 @@ MonoBehaviour:
   season: {fileID: 11400000, guid: a1bbecb2f91340848b79f2b8a40bf916, type: 2}
   dayOfWeek: 1
   globalLightSource: {fileID: 2036757915}
+  dayLightColor: {r: 0, g: 0, b: 0, a: 0}
+  nightLightIntensity: 0
+  dayLightIntensity: 0
   listPossibleWeather:
   - {fileID: 22654199}
   chanceOfWeather: 0.35
@@ -4488,9 +4491,6 @@ MonoBehaviour:
   currentDayIcon: {fileID: 679710973}
   specialEventIcon: {fileID: 209408808}
   hasSpecialEvent: 0
-  dayLightColor: {r: 0, g: 0, b: 0, a: 0}
-  nightLightIntensity: 0
-  dayLightIntensity: 0
 --- !u!114 &428653791
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4993,6 +4993,9 @@ MonoBehaviour:
   season: {fileID: 11400000, guid: 7b713e72322e3034792e437b4bea3ceb, type: 2}
   dayOfWeek: 4
   globalLightSource: {fileID: 2036757915}
+  dayLightColor: {r: 0, g: 0, b: 0, a: 0}
+  nightLightIntensity: 0
+  dayLightIntensity: 0
   listPossibleWeather:
   - {fileID: 194580327}
   chanceOfWeather: 0.1
@@ -5000,9 +5003,6 @@ MonoBehaviour:
   currentDayIcon: {fileID: 1634567997}
   specialEventIcon: {fileID: 1705317277}
   hasSpecialEvent: 0
-  dayLightColor: {r: 0, g: 0, b: 0, a: 0}
-  nightLightIntensity: 0
-  dayLightIntensity: 0
 --- !u!114 &493494862
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6948,6 +6948,9 @@ MonoBehaviour:
   season: {fileID: 11400000, guid: a1bbecb2f91340848b79f2b8a40bf916, type: 2}
   dayOfWeek: 4
   globalLightSource: {fileID: 2036757915}
+  dayLightColor: {r: 0, g: 0, b: 0, a: 0}
+  nightLightIntensity: 0
+  dayLightIntensity: 0
   listPossibleWeather:
   - {fileID: 22654199}
   chanceOfWeather: 0.5
@@ -6955,9 +6958,6 @@ MonoBehaviour:
   currentDayIcon: {fileID: 1264718599}
   specialEventIcon: {fileID: 468709341}
   hasSpecialEvent: 0
-  dayLightColor: {r: 0, g: 0, b: 0, a: 0}
-  nightLightIntensity: 0
-  dayLightIntensity: 0
 --- !u!114 &704825499
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7118,6 +7118,9 @@ MonoBehaviour:
   season: {fileID: 11400000, guid: 95a124760536b204b95d1dbfbea803d7, type: 2}
   dayOfWeek: 3
   globalLightSource: {fileID: 2036757915}
+  dayLightColor: {r: 0, g: 0, b: 0, a: 0}
+  nightLightIntensity: 0
+  dayLightIntensity: 0
   listPossibleWeather:
   - {fileID: 194580327}
   chanceOfWeather: 0.1
@@ -7125,9 +7128,6 @@ MonoBehaviour:
   currentDayIcon: {fileID: 113364437}
   specialEventIcon: {fileID: 1833895718}
   hasSpecialEvent: 0
-  dayLightColor: {r: 0, g: 0, b: 0, a: 0}
-  nightLightIntensity: 0
-  dayLightIntensity: 0
 --- !u!114 &722485819
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7494,6 +7494,9 @@ MonoBehaviour:
   season: {fileID: 11400000, guid: 95a124760536b204b95d1dbfbea803d7, type: 2}
   dayOfWeek: 2
   globalLightSource: {fileID: 2036757915}
+  dayLightColor: {r: 0, g: 0, b: 0, a: 0}
+  nightLightIntensity: 0
+  dayLightIntensity: 0
   listPossibleWeather:
   - {fileID: 194580327}
   chanceOfWeather: 0.1
@@ -7501,9 +7504,6 @@ MonoBehaviour:
   currentDayIcon: {fileID: 26349389}
   specialEventIcon: {fileID: 945168957}
   hasSpecialEvent: 0
-  dayLightColor: {r: 0, g: 0, b: 0, a: 0}
-  nightLightIntensity: 0
-  dayLightIntensity: 0
 --- !u!114 &810370232
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8704,6 +8704,9 @@ MonoBehaviour:
   season: {fileID: 11400000, guid: a1bbecb2f91340848b79f2b8a40bf916, type: 2}
   dayOfWeek: 3
   globalLightSource: {fileID: 2036757915}
+  dayLightColor: {r: 0, g: 0, b: 0, a: 0}
+  nightLightIntensity: 0
+  dayLightIntensity: 0
   listPossibleWeather:
   - {fileID: 22654199}
   chanceOfWeather: 0.5
@@ -8711,9 +8714,6 @@ MonoBehaviour:
   currentDayIcon: {fileID: 2356890}
   specialEventIcon: {fileID: 497229185}
   hasSpecialEvent: 1
-  dayLightColor: {r: 0, g: 0, b: 0, a: 0}
-  nightLightIntensity: 0
-  dayLightIntensity: 0
 --- !u!114 &956097383
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8766,8 +8766,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventType: 0
   clipToPlay: {fileID: 8300000, guid: 3176dc496e292cf4baafa0b1051673e0, type: 3}
-  rigidBodyOfPlayOnMoveSource: {fileID: 0}
   audioVolume: 0.1
+  rigidBodyOfPlayOnMoveSource: {fileID: 2718115282367250603}
   randomChecksToPlayAudioPerHour: 0
   randomizedSoundPercentage: 0
 --- !u!82 &956097386
@@ -17624,6 +17624,9 @@ MonoBehaviour:
   season: {fileID: 11400000, guid: a1bbecb2f91340848b79f2b8a40bf916, type: 2}
   dayOfWeek: 2
   globalLightSource: {fileID: 2036757915}
+  dayLightColor: {r: 0, g: 0, b: 0, a: 0}
+  nightLightIntensity: 0
+  dayLightIntensity: 0
   listPossibleWeather:
   - {fileID: 22654199}
   chanceOfWeather: 0.35
@@ -17631,9 +17634,6 @@ MonoBehaviour:
   currentDayIcon: {fileID: 1001189042}
   specialEventIcon: {fileID: 2003404965}
   hasSpecialEvent: 0
-  dayLightColor: {r: 0, g: 0, b: 0, a: 0}
-  nightLightIntensity: 0
-  dayLightIntensity: 0
 --- !u!114 &1045743904
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17864,6 +17864,9 @@ MonoBehaviour:
   season: {fileID: 11400000, guid: d3d5e72b731d3b640af32afe97df1a8d, type: 2}
   dayOfWeek: 3
   globalLightSource: {fileID: 2036757915}
+  dayLightColor: {r: 0, g: 0, b: 0, a: 0}
+  nightLightIntensity: 0
+  dayLightIntensity: 0
   listPossibleWeather:
   - {fileID: 194580327}
   chanceOfWeather: 0.5
@@ -17871,9 +17874,6 @@ MonoBehaviour:
   currentDayIcon: {fileID: 1156633123}
   specialEventIcon: {fileID: 1104674461}
   hasSpecialEvent: 0
-  dayLightColor: {r: 0, g: 0, b: 0, a: 0}
-  nightLightIntensity: 0
-  dayLightIntensity: 0
 --- !u!114 &1101117907
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19279,6 +19279,9 @@ MonoBehaviour:
   season: {fileID: 11400000, guid: 95a124760536b204b95d1dbfbea803d7, type: 2}
   dayOfWeek: 4
   globalLightSource: {fileID: 2036757915}
+  dayLightColor: {r: 0, g: 0, b: 0, a: 0}
+  nightLightIntensity: 0
+  dayLightIntensity: 0
   listPossibleWeather:
   - {fileID: 194580327}
   chanceOfWeather: 0.1
@@ -19286,9 +19289,6 @@ MonoBehaviour:
   currentDayIcon: {fileID: 677174776}
   specialEventIcon: {fileID: 2071393650}
   hasSpecialEvent: 0
-  dayLightColor: {r: 0, g: 0, b: 0, a: 0}
-  nightLightIntensity: 0
-  dayLightIntensity: 0
 --- !u!114 &1200922768
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25088,6 +25088,9 @@ MonoBehaviour:
   season: {fileID: 11400000, guid: 7b713e72322e3034792e437b4bea3ceb, type: 2}
   dayOfWeek: 3
   globalLightSource: {fileID: 2036757915}
+  dayLightColor: {r: 0, g: 0, b: 0, a: 0}
+  nightLightIntensity: 0
+  dayLightIntensity: 0
   listPossibleWeather:
   - {fileID: 194580327}
   chanceOfWeather: 0.1
@@ -25095,9 +25098,6 @@ MonoBehaviour:
   currentDayIcon: {fileID: 1593621197}
   specialEventIcon: {fileID: 1038063152}
   hasSpecialEvent: 0
-  dayLightColor: {r: 0, g: 0, b: 0, a: 0}
-  nightLightIntensity: 0
-  dayLightIntensity: 0
 --- !u!114 &1327257361
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25267,6 +25267,9 @@ MonoBehaviour:
   season: {fileID: 11400000, guid: 7b713e72322e3034792e437b4bea3ceb, type: 2}
   dayOfWeek: 5
   globalLightSource: {fileID: 2036757915}
+  dayLightColor: {r: 0, g: 0, b: 0, a: 0}
+  nightLightIntensity: 0
+  dayLightIntensity: 0
   listPossibleWeather:
   - {fileID: 194580327}
   - {fileID: 22654199}
@@ -25275,9 +25278,6 @@ MonoBehaviour:
   currentDayIcon: {fileID: 1444795096}
   specialEventIcon: {fileID: 346867180}
   hasSpecialEvent: 0
-  dayLightColor: {r: 0, g: 0, b: 0, a: 0}
-  nightLightIntensity: 0
-  dayLightIntensity: 0
 --- !u!114 &1351616202
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25659,6 +25659,9 @@ MonoBehaviour:
   season: {fileID: 11400000, guid: d3d5e72b731d3b640af32afe97df1a8d, type: 2}
   dayOfWeek: 2
   globalLightSource: {fileID: 2036757915}
+  dayLightColor: {r: 0, g: 0, b: 0, a: 0}
+  nightLightIntensity: 0
+  dayLightIntensity: 0
   listPossibleWeather:
   - {fileID: 194580327}
   chanceOfWeather: 0.5
@@ -25666,9 +25669,6 @@ MonoBehaviour:
   currentDayIcon: {fileID: 1602035203}
   specialEventIcon: {fileID: 440110752}
   hasSpecialEvent: 0
-  dayLightColor: {r: 0, g: 0, b: 0, a: 0}
-  nightLightIntensity: 0
-  dayLightIntensity: 0
 --- !u!114 &1502737767
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25763,6 +25763,9 @@ MonoBehaviour:
   season: {fileID: 11400000, guid: d3d5e72b731d3b640af32afe97df1a8d, type: 2}
   dayOfWeek: 5
   globalLightSource: {fileID: 2036757915}
+  dayLightColor: {r: 0, g: 0, b: 0, a: 0}
+  nightLightIntensity: 0
+  dayLightIntensity: 0
   listPossibleWeather:
   - {fileID: 194580327}
   chanceOfWeather: 0.3
@@ -25770,9 +25773,6 @@ MonoBehaviour:
   currentDayIcon: {fileID: 2127271116}
   specialEventIcon: {fileID: 104853728}
   hasSpecialEvent: 0
-  dayLightColor: {r: 0, g: 0, b: 0, a: 0}
-  nightLightIntensity: 0
-  dayLightIntensity: 0
 --- !u!114 &1504786314
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25867,6 +25867,9 @@ MonoBehaviour:
   season: {fileID: 11400000, guid: d3d5e72b731d3b640af32afe97df1a8d, type: 2}
   dayOfWeek: 4
   globalLightSource: {fileID: 2036757915}
+  dayLightColor: {r: 0, g: 0, b: 0, a: 0}
+  nightLightIntensity: 0
+  dayLightIntensity: 0
   listPossibleWeather:
   - {fileID: 194580327}
   chanceOfWeather: 0.35
@@ -25874,9 +25877,6 @@ MonoBehaviour:
   currentDayIcon: {fileID: 29475431}
   specialEventIcon: {fileID: 641331322}
   hasSpecialEvent: 0
-  dayLightColor: {r: 0, g: 0, b: 0, a: 0}
-  nightLightIntensity: 0
-  dayLightIntensity: 0
 --- !u!114 &1528888116
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26603,6 +26603,9 @@ MonoBehaviour:
   season: {fileID: 11400000, guid: d3d5e72b731d3b640af32afe97df1a8d, type: 2}
   dayOfWeek: 1
   globalLightSource: {fileID: 2036757915}
+  dayLightColor: {r: 0, g: 0, b: 0, a: 0}
+  nightLightIntensity: 0
+  dayLightIntensity: 0
   listPossibleWeather:
   - {fileID: 194580327}
   - {fileID: 22654199}
@@ -26611,9 +26614,6 @@ MonoBehaviour:
   currentDayIcon: {fileID: 21201042}
   specialEventIcon: {fileID: 1189130505}
   hasSpecialEvent: 0
-  dayLightColor: {r: 0, g: 0, b: 0, a: 0}
-  nightLightIntensity: 0
-  dayLightIntensity: 0
 --- !u!114 &1643219942
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26784,6 +26784,9 @@ MonoBehaviour:
   season: {fileID: 11400000, guid: 7b713e72322e3034792e437b4bea3ceb, type: 2}
   dayOfWeek: 0
   globalLightSource: {fileID: 2036757915}
+  dayLightColor: {r: 0, g: 0, b: 0, a: 0}
+  nightLightIntensity: 0
+  dayLightIntensity: 0
   listPossibleWeather:
   - {fileID: 194580327}
   chanceOfWeather: 0.1
@@ -26791,9 +26794,6 @@ MonoBehaviour:
   currentDayIcon: {fileID: 35108678}
   specialEventIcon: {fileID: 515117049}
   hasSpecialEvent: 1
-  dayLightColor: {r: 0, g: 0, b: 0, a: 0}
-  nightLightIntensity: 0
-  dayLightIntensity: 0
 --- !u!114 &1654452894
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28120,6 +28120,9 @@ MonoBehaviour:
   season: {fileID: 11400000, guid: 7b713e72322e3034792e437b4bea3ceb, type: 2}
   dayOfWeek: 6
   globalLightSource: {fileID: 2036757915}
+  dayLightColor: {r: 0, g: 0, b: 0, a: 0}
+  nightLightIntensity: 0
+  dayLightIntensity: 0
   listPossibleWeather:
   - {fileID: 194580327}
   - {fileID: 22654199}
@@ -28128,9 +28131,6 @@ MonoBehaviour:
   currentDayIcon: {fileID: 670436511}
   specialEventIcon: {fileID: 329453051}
   hasSpecialEvent: 1
-  dayLightColor: {r: 0, g: 0, b: 0, a: 0}
-  nightLightIntensity: 0
-  dayLightIntensity: 0
 --- !u!114 &1764473775
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28377,6 +28377,9 @@ MonoBehaviour:
   season: {fileID: 11400000, guid: 7b713e72322e3034792e437b4bea3ceb, type: 2}
   dayOfWeek: 2
   globalLightSource: {fileID: 2036757915}
+  dayLightColor: {r: 0, g: 0, b: 0, a: 0}
+  nightLightIntensity: 0
+  dayLightIntensity: 0
   listPossibleWeather:
   - {fileID: 194580327}
   chanceOfWeather: 0.1
@@ -28384,9 +28387,6 @@ MonoBehaviour:
   currentDayIcon: {fileID: 1644209303}
   specialEventIcon: {fileID: 235699458}
   hasSpecialEvent: 0
-  dayLightColor: {r: 0, g: 0, b: 0, a: 0}
-  nightLightIntensity: 0
-  dayLightIntensity: 0
 --- !u!114 &1782145625
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29733,6 +29733,9 @@ MonoBehaviour:
   season: {fileID: 11400000, guid: 95a124760536b204b95d1dbfbea803d7, type: 2}
   dayOfWeek: 5
   globalLightSource: {fileID: 2036757915}
+  dayLightColor: {r: 0, g: 0, b: 0, a: 0}
+  nightLightIntensity: 0
+  dayLightIntensity: 0
   listPossibleWeather:
   - {fileID: 194580327}
   chanceOfWeather: 0.1
@@ -29740,9 +29743,6 @@ MonoBehaviour:
   currentDayIcon: {fileID: 1217624981}
   specialEventIcon: {fileID: 88358071}
   hasSpecialEvent: 0
-  dayLightColor: {r: 0, g: 0, b: 0, a: 0}
-  nightLightIntensity: 0
-  dayLightIntensity: 0
 --- !u!114 &1975333565
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31299,6 +31299,9 @@ MonoBehaviour:
   season: {fileID: 11400000, guid: a1bbecb2f91340848b79f2b8a40bf916, type: 2}
   dayOfWeek: 0
   globalLightSource: {fileID: 2036757915}
+  dayLightColor: {r: 0, g: 0, b: 0, a: 0}
+  nightLightIntensity: 0
+  dayLightIntensity: 0
   listPossibleWeather:
   - {fileID: 22654199}
   chanceOfWeather: 0.25
@@ -31306,9 +31309,6 @@ MonoBehaviour:
   currentDayIcon: {fileID: 2099178566}
   specialEventIcon: {fileID: 1155776812}
   hasSpecialEvent: 0
-  dayLightColor: {r: 0, g: 0, b: 0, a: 0}
-  nightLightIntensity: 0
-  dayLightIntensity: 0
 --- !u!114 &2012141750
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31588,6 +31588,9 @@ MonoBehaviour:
   season: {fileID: 11400000, guid: 95a124760536b204b95d1dbfbea803d7, type: 2}
   dayOfWeek: 0
   globalLightSource: {fileID: 2036757915}
+  dayLightColor: {r: 0, g: 0, b: 0, a: 0}
+  nightLightIntensity: 0
+  dayLightIntensity: 0
   listPossibleWeather:
   - {fileID: 194580327}
   chanceOfWeather: 0.1
@@ -31595,9 +31598,6 @@ MonoBehaviour:
   currentDayIcon: {fileID: 359164293}
   specialEventIcon: {fileID: 1960499726}
   hasSpecialEvent: 0
-  dayLightColor: {r: 0, g: 0, b: 0, a: 0}
-  nightLightIntensity: 0
-  dayLightIntensity: 0
 --- !u!114 &2050264652
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32102,6 +32102,9 @@ MonoBehaviour:
   season: {fileID: 11400000, guid: a1bbecb2f91340848b79f2b8a40bf916, type: 2}
   dayOfWeek: 6
   globalLightSource: {fileID: 2036757915}
+  dayLightColor: {r: 0, g: 0, b: 0, a: 0}
+  nightLightIntensity: 0
+  dayLightIntensity: 0
   listPossibleWeather:
   - {fileID: 22654199}
   chanceOfWeather: 0.5
@@ -32109,9 +32112,6 @@ MonoBehaviour:
   currentDayIcon: {fileID: 691444724}
   specialEventIcon: {fileID: 207506526}
   hasSpecialEvent: 1
-  dayLightColor: {r: 0, g: 0, b: 0, a: 0}
-  nightLightIntensity: 0
-  dayLightIntensity: 0
 --- !u!114 &2087242925
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32164,8 +32164,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventType: 1
   clipToPlay: {fileID: 8300000, guid: b2aa0de103c69a242b7ea9e66ca9c341, type: 3}
-  rigidBodyOfPlayOnMoveSource: {fileID: 0}
   audioVolume: 0.3
+  rigidBodyOfPlayOnMoveSource: {fileID: 0}
   randomChecksToPlayAudioPerHour: 0
   randomizedSoundPercentage: 0
 --- !u!82 &2087242928
